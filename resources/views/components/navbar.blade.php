@@ -17,6 +17,11 @@
             <a class="nav-link nav-reg" href="{{route('register')}}">Registrati</a>
           </li>
           @else
+          {{-- bottone inserimento articolo --}}
+          <li class="nav-item">
+            <a class="nav-link nav-reg" href="#">Inserisci articolo</a>
+          </li>
+
           <a class="nav-link dropdown-toggle nav-log" href="#" id="navbarDropdownMenuLink" role="button" 
           data-bstoggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
         

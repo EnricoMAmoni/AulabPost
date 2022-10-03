@@ -9,12 +9,22 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
+          @guest
           <li class="nav-item">
-            <a class="nav-link" href="{{route('login')}}">Accedi</a>
+            <a class="nav-link nav-log" href="{{route('login')}}">Accedi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('register')}}">Registrati</a>
+            <a class="nav-link nav-reg" href="{{route('register')}}">Registrati</a>
           </li>
+          @else
+          <a class="nav-link dropdown-toggle nav-log" href="#" id="navbarDropdownMenuLink" role="button" 
+          data-bstoggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
+        
+          <a class="nav-link nav-reg" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>               
+          <form id="logout-form"action="{{route('logout')}}" method="POST">
+          @csrf
+        
+          @endguest
         </ul>
       </div>
     </div>

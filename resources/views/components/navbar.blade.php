@@ -19,16 +19,16 @@
           @else
           {{-- bottone inserimento articolo --}}
           <li class="nav-item">
-            <a class="nav-link nav-reg" href="#">Inserisci articolo</a>
+            <a class="nav-link" href="{{route('articles.create')}}">Inserisci articolo</a>
           </li>
 
           <a class="nav-link dropdown-toggle nav-log" href="#" id="navbarDropdownMenuLink" role="button" 
           data-bstoggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
         
-          <a class="nav-link nav-reg" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>               
+          <a class="nav-link nav-reg" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> Logout </a>               
           <form id="logout-form"action="{{route('logout')}}" method="POST">
-          @csrf
-        
+            @csrf
+          </form>
           @endguest
         </ul>
       </div>

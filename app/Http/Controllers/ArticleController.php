@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -24,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -34,8 +35,18 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        Auth::user()->articles()->create(
+            [
+                'title'=>$request->input('title'),
+                'description'=>$request->input('decription'),
+                'body'=>$request->input('body'),
+                'img'=>$request->file('img')->store("public/img"),
+                'category_id'=>$request->input('category_id')
+            ]
+            );
+
+            return redirect()->route('home')->with("message", "Articolo caricato correttamente");
     }
 
     /**

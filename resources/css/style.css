@@ -1,4 +1,12 @@
+/* Style */
 
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    
+}
 /* navbar */
 
 .nav-reg{
@@ -8,4 +16,10 @@
 .nav-log{
     position: absolute;
     right: 10%;
+}
+
+header{
+    background: rgb(216,215,233);
+    background: linear-gradient(175deg, rgba(216,215,233,1) 0%, rgba(240,255,254,1) 95%, rgba(0,212,255,1) 100%);
+    height:1000px;
 }

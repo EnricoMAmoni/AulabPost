@@ -48,6 +48,14 @@ class ArticleController extends Controller
             ]
             );
 
+        $validated = $request->validate([
+                'title' => 'required|unique:posts|max:50',
+                'description' => 'required|max:255',
+                'body' => 'required|min:30|max:10000',
+                'img' => 'required|mimes:png,jpg,jpeg,webp',
+
+            ]);
+
             return redirect()->route('home')->with("message", "Articolo caricato correttamente");
     }
 

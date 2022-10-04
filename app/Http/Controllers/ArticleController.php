@@ -39,7 +39,7 @@ class ArticleController extends Controller
         Auth::user()->articles()->create(
             [
                 'title'=>$request->input('title'),
-                'description'=>$request->input('decription'),
+                'description'=>$request->input('description'),
                 'body'=>$request->input('body'),
                 'img'=>$request->file('img')->store("public/img"),
                 'category_id'=>$request->input('category_id')

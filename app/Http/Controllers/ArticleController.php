@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -57,8 +58,16 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('articles.show', compact('article'));
     }
+
+   public function article_by_category(Category $category){
+
+       $article = Article::where('category_id', $category->id)->orderBy('created_at', 'DESC')->get();
+
+       return view('articles.category', compact('articles', 'category'));
+   }
+
 
     /**
      * Show the form for editing the specified resource.

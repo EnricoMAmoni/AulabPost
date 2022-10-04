@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
@@ -36,7 +37,7 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {   
         // dd($request->all());
         Auth::user()->articles()->create(
@@ -48,17 +49,28 @@ class ArticleController extends Controller
                 'category_id'=>$request->input('category_id')
             ]
             );
-            
-            // $request->validate([
+
+            // $request->validate(
+            //     [
             //     'title' => 'required|unique:posts|max:50',
             //     'description' => 'required|max:255',
             //     'body' => 'required|min:30|max:10000',
             //     'img' => 'required|mimes:png,jpg,jpeg,webp'
-                
-            // ]);
+            //     ]
+            // );  
+
+            // public function rules(){
+
             
             return redirect()->route('home')->with("message", "Articolo caricato correttamente");
-        }
+
+
+    }
+
+
+  
+
+
 
     /**
      * Display the specified resource.

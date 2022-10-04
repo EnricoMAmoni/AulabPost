@@ -1,6 +1,12 @@
 <x-layout>
-<div class="container">
-    <div class="row">
+
+  @if(session('message'))
+  <div class="alert alert-success">
+      {{session('message')}}
+  </div>
+  @endif
+  <div class="container-fluid bg-home vh-100">
+      <div class="row justify-content-center">
         @foreach ($articles as $article)
         <div class="card" style="width: 18rem;">
             <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="{{$article->title}}">
@@ -13,8 +19,7 @@
           </div>
         
         @endforeach
-    </div>
-
+      
+  </div>
 </div>
-
 </x-layout>

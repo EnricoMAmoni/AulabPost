@@ -38,6 +38,7 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {   
+        // dd($request->all());
         Auth::user()->articles()->create(
             [
                 'title'=>$request->input('title'),
@@ -47,17 +48,17 @@ class ArticleController extends Controller
                 'category_id'=>$request->input('category_id')
             ]
             );
-
-        $validated = $request->validate([
-                'title' => 'required|unique:posts|max:50',
-                'description' => 'required|max:255',
-                'body' => 'required|min:30|max:10000',
-                'img' => 'required|mimes:png,jpg,jpeg,webp',
-
-            ]);
-
+            
+            // $request->validate([
+            //     'title' => 'required|unique:posts|max:50',
+            //     'description' => 'required|max:255',
+            //     'body' => 'required|min:30|max:10000',
+            //     'img' => 'required|mimes:png,jpg,jpeg,webp'
+                
+            // ]);
+            
             return redirect()->route('home')->with("message", "Articolo caricato correttamente");
-    }
+        }
 
     /**
      * Display the specified resource.

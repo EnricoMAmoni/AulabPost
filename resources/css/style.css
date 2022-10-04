@@ -4,8 +4,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    
+.titleMain{
+    font-size: 100px;
+}
+
+
+.claim{
+    font-size: 60px;
 }
 /* navbar */
 
@@ -18,8 +23,24 @@ h1{
     right: 10%;
 }
 
-header{
+.bg-home{
     background: rgb(216,215,233);
     background: linear-gradient(175deg, rgba(216,215,233,1) 0%, rgba(240,255,254,1) 95%, rgba(0,212,255,1) 100%);
-    height:1000px;
+    height:100%;
+}
+
+
+/* card */
+
+.btn{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Pagina Show */
+
+.border-show{
+    border: solid 3px black;
+    width: 30%;
 }

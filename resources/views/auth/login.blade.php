@@ -1,13 +1,5 @@
 <x-layout>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-            </ul>
-        </div>
-    @endif 
+   
 
     <div class="container">
         <div class="row">
@@ -18,12 +10,18 @@
                         <label for="email" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
                             <input name="email" type="text" class="form-control-plaintext" placeholder="email@example.com">
+                            @error('email')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                         <div class="col-sm-10">
-                            <input name="password" type="password" class="form-control" id="inputPassword">
+                            <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Inserisci password">
+                            @error('password')
+                            <div class="alert alert-danger">{{$message}}</div>
+                            @enderror
                         </div>
                     </div>
                     <button type="submit" class="btn btn-success">Accedi</button>

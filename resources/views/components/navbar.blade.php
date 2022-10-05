@@ -33,6 +33,10 @@
               <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
             </li>
 
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+            </li>
+
           
             @csrf
           </form>

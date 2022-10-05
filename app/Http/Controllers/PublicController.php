@@ -9,8 +9,14 @@ use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
+    // public function home() {
+    //     $articles = Article::orderBy('created_at', 'desc')->take(6)->get();
+    //     return view('home', compact('articles'));
+        
+    // }
+
     public function home() {
-        $articles = Article::orderBy('created_at', 'desc')->take(6)->get();
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(6)->get();
         return view('home', compact('articles'));
         
     }

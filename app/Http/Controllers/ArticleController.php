@@ -68,19 +68,26 @@ class ArticleController extends Controller
         return view('articles.show', compact('article'));
     }
 
-   public function articlesForCategory(Category $category){
+//    public function articlesForCategory(Category $category){
 
-       $articles = Article::where('category_id', $category->id)->orderBy('created_at', 'DESC')->get();
+//        $articles = Article::where('category_id', $category->id)->orderBy('created_at', 'DESC')->get();
 
-       return view('articles.indexCategory', compact('articles', 'category'));
-   }
+//        return view('articles.indexCategory', compact('articles', 'category'));
+//    }
 
-   public function articlesForUser(User $user){
+    public function articlesForCategory(Category $category){
 
-    $articles = Article::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
+        $articles = Article::where('category_id', $category->id)->where('is_accepted', true)->orderBy('created_at', 'DESC')->get();
 
-    return view('articles.indexUser', compact('articles', 'user'));
-}
+        return view('articles.indexCategory', compact('articles', 'category'));
+    }
+
+    public function articlesForUser(User $user){
+
+        $articles = Article::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
+
+        return view('articles.indexUser', compact('articles', 'user'));
+    }
 
 
     /**

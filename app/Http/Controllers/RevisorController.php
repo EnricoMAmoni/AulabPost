@@ -11,4 +11,9 @@ class RevisorController extends Controller
         $article = Article::where('is_accepted', false)->get();
         return view('revisor.dashboard', compact('articles'));
     }
+
+    public function articleDetail(Article $article)
+    {
+        return view('revisor.article-detail', compact('article'));
+    }
 }

@@ -50,25 +50,10 @@ class ArticleController extends Controller
             ]
             );
 
-            // $request->validate(
-            //     [
-            //     'title' => 'required|unique:posts|max:50',
-            //     'description' => 'required|max:255',
-            //     'body' => 'required|min:30|max:10000',
-            //     'img' => 'required|mimes:png,jpg,jpeg,webp'
-            //     ]
-            // );  
-
-            // public function rules(){
-
-            
             return redirect()->route('home')->with("message", "Articolo caricato correttamente");
 
 
     }
-
-
-  
 
 
 

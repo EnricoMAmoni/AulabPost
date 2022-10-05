@@ -13,8 +13,9 @@
 <body>
 
     <x-navbar/>
-    
-    {{$slot}}
+    <div class="bg-home">
+        {{$slot}}
+    </div>
     
     <x-footer/>
 

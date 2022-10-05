@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
@@ -28,3 +29,10 @@ Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesFor
 // rotte gestione utenti
 Route::get('/work-with-us', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request', [PublicController::class, 'sendRoleRequest'])->name('user.role.request');
+Route::middleware('admin')->group(function(){
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/{user}/set-revisor', [AdminController::class, 'makeUserRevisor'])->name('admin.makeUserRevisor');
+    Route::get('/admin/{user}/set-admin', [AdminController::class, 'makeUserAdmin'])->name('admin.makeUserAdmin');
+    Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
+
+});

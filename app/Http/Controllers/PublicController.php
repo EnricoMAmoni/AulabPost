@@ -19,7 +19,7 @@ class PublicController extends Controller
         return view('workWithUs');
     }
     
-    public fucntion sendRoleRequest(Request $request)
+    public function sendRoleRequest(Request $request)
     {
         $user = Auth::user();
         $role = $request->input('role');

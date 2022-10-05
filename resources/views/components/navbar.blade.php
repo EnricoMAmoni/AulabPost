@@ -28,6 +28,12 @@
         
           <a class="nav-link nav-reg" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> Logout </a>               
           <form id="logout-form"action="{{route('logout')}}" method="POST">
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+            </li>
+
+          
             @csrf
           </form>
           @endguest

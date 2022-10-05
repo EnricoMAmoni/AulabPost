@@ -1,4 +1,3 @@
-
 <x-layout>
 
     @if(session('message'))
@@ -20,10 +19,10 @@
                 <a href="{{route('articles.category', $article->category)}}" class="btn btn-primary">{{$article->category->name}}</a>
                 <a href="{{route('articles.show', $article)}}" class="btn btn-primary">Leggi</a>
             </div>
-          </div>
-        </div>  
+        </div>
+    </div>  
         @endforeach
         
     </div>
-</div>
+</div> 
 </x-layout>

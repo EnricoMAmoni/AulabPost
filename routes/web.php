@@ -24,5 +24,7 @@ Route::post('/articles/store', [ArticleController::class, 'store'])->name('artic
 Route::get('/articles/{article}/show', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/articles/{category}/indexCategory', [ArticleController::class, 'articlesForCategory'])->name('articles.category');
 Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesForUser'])->name('articles.user');
-Route::get('/work-with-us', [PublicController::class, 'workWithUs'])->name('work.with.us');
 
+// rotte gestione utenti
+Route::get('/work-with-us', [PublicController::class, 'workWithUs'])->name('work.with.us');
+Route::post('/user/send-role-request', [PublicController::class, 'sendRoleRequest'])->name('user.role.request');

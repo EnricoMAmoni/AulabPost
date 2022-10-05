@@ -29,17 +29,23 @@
           <a class="nav-link nav-reg" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> Logout </a>               
           <form id="logout-form"action="{{route('logout')}}" method="POST">
 
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
-            </li>
-
-          
+            
+            
             @csrf
           </form>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('work.with.us')}}">Lavora con noi</a>
+          </li>
+
           @endguest
         </ul>
       </div>

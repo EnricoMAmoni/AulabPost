@@ -9,7 +9,7 @@ class RevisorController extends Controller
 {
     public function revisorDashboard(){
         $article = Article::where('is_accepted', false)->get();
-        return view('revisor.dashboard', compact('articles'));
+        return view('revisor.dashboard', compact('article'));
     }
 
     public function articleDetail(Article $article)

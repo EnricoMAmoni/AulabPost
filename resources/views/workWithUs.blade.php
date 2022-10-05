@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-12 col-md-6">
-                <form action=""{{route('user.role.request')}}" method="POST">
+                <form action="{{route('user.role.request')}}" method="POST">
                 @csrf
                 
                 <div class="mb-3">

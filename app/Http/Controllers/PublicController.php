@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Mail\RequestRoleMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
@@ -31,7 +32,7 @@ class PublicController extends Controller
         $role = $request->input('role');
         $email = $request->input('email');
         $presentation = $request->input('presentation');
-        $requestMAil = new ReuestRoleMail(compact('role', 'email', 'presentation'));
+        $requestMail = new RequestRoleMail(compact('role', 'email', 'presentation'));
         Mail::to('admin@blog.it')->send($requestMail);
         switch ($role) {
             case 'admin':

@@ -18,6 +18,7 @@
             <h3 class="my-3"> <span class="h5"> Descrizione : </span>{{$article->description}}</h3>
             <h3 class="my-3"> <span class="h5"> Autore : </span>{{$article->user->name}}</h3>
             <h3 class="my-3"> <span class="h5"> Categoria : </span>{{$article->category->name}}</h3>
+            <p class="my-3"><span class="h5"> Articolo : </span>{{$article->body}}</p>
             <h3 class="my-3"> <span class="h5"> Creato : </span>{{$article->created_at->diffForHumans()}}</h3>
         
             <div class="d-flex">

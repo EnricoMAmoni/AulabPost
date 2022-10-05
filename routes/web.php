@@ -29,7 +29,7 @@ Route::get('/articles/{category}/indexCategory', [ArticleController::class, 'art
 Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesForUser'])->name('articles.user');
 
 // rotte gestione utenti
-Route::get('/work-with-us', [PublicController::class, 'workWithUs'])->name('work.with.us');
+Route::get('/workWithUs', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request', [PublicController::class, 'sendRoleRequest'])->name('user.role.request');
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
@@ -41,7 +41,7 @@ Route::middleware('admin')->group(function(){
 
 
 // rotte per revisore
-Route::middleware('admin')->group(function(){
+Route::middleware('revisor')->group(function(){
     Route::get('/revisor/dashboard', [RevisorController::class, 'revisorDashboard'])->name('revisor.dashboard');
     Route::get('/revisor/article/{article}/detail', [RevisorController::class, 'articleDetail'])->name('revisor.detail');
     Route::get('/revisor/article/{article}/accept', [RevisorController::class, 'acceptArticle'])->name('revisor.accept');

@@ -19,9 +19,10 @@ use App\Http\Controllers\ArticleController;
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
 // rotte per articoli
-
-Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
-Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
+Route::middleware('writer')->group(function(){
+    Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+    Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
+});
 Route::get('/articles/{article}/show', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/articles/{category}/indexCategory', [ArticleController::class, 'articlesForCategory'])->name('articles.category');
 Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesForUser'])->name('articles.user');
@@ -36,3 +37,13 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
 
 });
+
+
+// rotte per revisore
+Route::middleware('admin')->group(function(){
+    Route::get('/revisor/dashboard', [RevisorController::class, 'revisorDashboard'])->name('revisor.dashboard');
+    Route::get('/revisor/article/{article}/detail', [RevisorController::class, 'articleDetail'])->name('revisor.detail');
+    Route::get('/revisor/article/{article}/accept', [RevisorController::class, 'acceptArticle'])->name('revisor.accept');
+    Route::get('/revisor/article/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.reject');
+
+});    

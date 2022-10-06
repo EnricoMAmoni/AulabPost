@@ -68,12 +68,6 @@ class ArticleController extends Controller
         return view('articles.show', compact('article'));
     }
 
-//    public function articlesForCategory(Category $category){
-
-//        $articles = Article::where('category_id', $category->id)->orderBy('created_at', 'DESC')->get();
-
-//        return view('articles.indexCategory', compact('articles', 'category'));
-//    }
 
     public function articlesForCategory(Category $category){
 

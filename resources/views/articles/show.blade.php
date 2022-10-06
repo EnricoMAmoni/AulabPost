@@ -10,7 +10,7 @@
                     <h3>{{$article->description}}</h3>
                     <p>{{$article->body}}</p>
                     <a href="{{route('articles.category', $article->category)}}" class="card-text">{{$article->category->name}}</a>
-                    <p>Pubblicato da : <a href="{{route('articles.user',$article->user)}}">{{$article->user->name}}</a></p>
+                    <p>Pubblicato da : <a href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
                     <p>Pubblicato il : {{$article->created_at->format('d/m/Y')}}</p>
                 </div>
             </div>

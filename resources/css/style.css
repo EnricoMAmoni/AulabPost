@@ -1,3 +1,11 @@
+/* Color */
+
+:root{                      
+    --main-color: #FEED00;
+    --main-color2: #353A40;
+
+
+}
 /* Style */
 
 *{
@@ -12,7 +20,9 @@
 .claim{
     font-size: 60px;
 }
+
 /* navbar */
+
 
 .nav-reg{
     position: absolute;
@@ -23,14 +33,121 @@
     right: 10%;
 }
 
-.bg-home{
-    background: rgb(216,215,233);
-    background: linear-gradient(175deg, rgba(216,215,233,1) 0%, rgba(240,255,254,1) 95%, rgba(0,212,255,1) 100%);
-    height:100%;
+.bg-navbar{
+    background: #f5ea4ef8;
+    height: 100px;
 }
 
 
+
+.nav2{
+    background-color: rgb(27, 19, 19);
+    height: 250px;
+}
+
+.div-logo-aulab{
+    margin-top: 60px;
+}
+
+.log{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+}
+
+.log2{
+    color: chartreuse;
+}
+
+.log2{
+    font-family: 'Franklin Gothic Medium';
+    font-style: oblique;
+}
+
+
+.nav{
+    z-index: 999;
+    border-bottom: 1px solid rgb(234, 239, 231);
+    background-color: rgb(27, 19, 19) !important;
+    position: fixed;
+    width: 100%;
+}
+
+.textNav1{
+    color: aliceblue !important;
+}
+
+.log3{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(232, 218, 200);
+    font-style: oblique;
+}
+
+.nav3{
+   background-color: rgb(27, 19, 19);
+    /* position: absolute;
+    left: 30%; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;   
+}
+
+.nav5{
+    border-top: 1px solid white;
+    width: 100%;
+    position: sticky;
+    top:100px;
+}
+
+/* .log4{
+    color: rgb(224, 213, 213);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150px;
+} */
+
+.log5{
+    font-style: oblique;
+    color: rgb(74, 182, 182);
+    font-size: 20px;
+}
+
+.navt1:hover{
+    color: rgb(127, 252, 3);
+    font-weight: bold;   
+}
+
+/* --- HOME --- */
+/* header */
+
+.bg-home{
+    background: rgb(216,215,233);
+    background: linear-gradient(175deg, rgba(216,215,233,1) 0%, rgba(240,255,254,1) 95%, rgba(0,212,255,1) 100%);
+    
+}
+
+.col-home{
+    height: 300px;
+}
+
+
+card-home */
+
+.img-card-home{
+    height: 500px;
+}
+
+.card-home{
+    height: 100px;
+    margin-bottom: 200px;
+    width: 80%;
+
+}
 /* card */
+
+.card-img{
+    width: 30%
+}
 
 .btn{
     text-transform: uppercase;
@@ -45,7 +162,7 @@
     width: 30%;
 }
 
-/* sfondo lungo */
-.sfondo-lungo{
-    height: 10000px !important;
-}
+
+
+
+

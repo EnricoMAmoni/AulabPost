@@ -44,3 +44,8 @@
     border: solid 3px black;
     width: 30%;
 }
+
+/* sfondo lungo */
+.sfondo-lungo{
+    height: 10000px !important;
+}

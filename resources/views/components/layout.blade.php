@@ -14,15 +14,14 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{$title ?? ''}}</title>
 </head>
-<body>
+<body class="bg-home">
     <x-navbar/>
-    <x-navbar2/>
-    <x-navbar3/>
+    
     <div class="bg-home">
         {{$slot}}
     </div>
     
-    <x-footer/>
+    
 {{-- AOS JS --}}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

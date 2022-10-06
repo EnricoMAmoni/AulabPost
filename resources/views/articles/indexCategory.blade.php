@@ -1,11 +1,13 @@
 <x-layout>
 
+    <x-navbar3/>
+
   @if(session('message'))
   <div class="alert alert-success">
       {{session('message')}}
   </div>
   @endif
-  <div class="container-fluid bg-home vh-100">
+  <div class="container-fluid bg-home mt-5 vh-100">
       <div class="row justify-content-center">
         @foreach ($articles as $article)
         <div class="card" style="width: 18rem;">

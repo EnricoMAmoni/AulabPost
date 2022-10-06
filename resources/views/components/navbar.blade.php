@@ -35,15 +35,15 @@
           </form>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
+            <a class="nav-link textNav1" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
+            <a class="nav-link textNav1" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('work.with.us')}}">Lavora con noi</a>
+            <a class="nav-link textNav1" href="{{route('work.with.us')}}">Lavora con noi</a>
           </li>
 
           @endguest

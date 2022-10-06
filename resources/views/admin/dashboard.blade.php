@@ -1,5 +1,5 @@
 <x-layout> 
-    <div class="container my-3">
+    <div class="container text-white my-3">
         <div class="row">
             <div class="col-12">
                 <h2>Richieste di amministratore</h2>
@@ -7,7 +7,7 @@
             </div>
         </div>
     </div>
-    <div class="container my-3">
+    <div class="container text-white my-3">
         <div class="row">
             <div class="col-12">
                 <h2>Richieste di revisore</h2>
@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-    <div class="container my-3">
+    <div class="container text-white my-3">
         <div class="row">
             <div class="col-12">
                 <h2>Richieste di articolista</h2>

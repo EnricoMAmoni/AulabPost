@@ -1,8 +1,10 @@
 <x-layout>
+
+    <x-navbar3/>
     <div class="container">
         <div class="row">
             @foreach ($articles as $article)
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-5" style="width: 18rem;">
                 <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="{{$article->title}}">
                 <div class="card-body">
                   <h5 class="card-title">{{$article->title}}</h5>

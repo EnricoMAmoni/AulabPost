@@ -28,6 +28,9 @@ Route::get('/articles/{article}/show', [ArticleController::class, 'show'])->name
 Route::get('/articles/{category}/indexCategory', [ArticleController::class, 'articlesForCategory'])->name('articles.category');
 Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesForUser'])->name('articles.user');
 
+// rotte per ricerca articoli
+Route::get('/articles/search', [PublicController::class, 'searchArticle'])->name('search.articles');
+
 // rotte gestione utenti
 Route::get('/workWithUs', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request', [PublicController::class, 'sendRoleRequest'])->name('user.role.request');
@@ -38,7 +41,6 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
 
 });
-
 
 // rotte per revisore
 Route::middleware('revisor')->group(function(){

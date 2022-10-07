@@ -1,10 +1,16 @@
 /* Color */
 
 :root{                      
-    --main-color: #FEED00;
+    /* --main-color: #0dbe98; */
     --main-color2: #353A40;
+    --main-color: #FEED00;
+    --main-color: #feec4aae;
 
 
+}
+
+.bg-dark{
+    background-color: var(--main-color) !important;
 }
 /* Style */
 
@@ -39,7 +45,6 @@
 }
 
 
-
 .nav2{
     background-color: rgb(27, 19, 19);
     height: 250px;
@@ -56,7 +61,7 @@
 }
 
 .log2{
-    color: chartreuse;
+    color: var(--main-color);
 }
 
 .log2{
@@ -150,8 +155,31 @@ card-home */
 }
 /* card */
 
+.div-img{
+    width: 30%;
+    height: 50%;
+    padding: 18px;
+    margin:10px;
+    background: linear-gradient(105deg,var(--main-color) 35%,rgba(0,0,0,0) 35%);
+    transition-duration: all 120s ;
+}
+
+.div-img-right{
+    width: 30%;
+    height: 50%;
+    padding: 18px;
+    margin:10px;
+    background: #0dbe98;
+    background: linear-gradient(614deg, var(--main-color)  35%,rgba(0,0,0,0) 35%);
+}
+
+.aos{
+    transition-duration: all 5s ;
+    
+}
+
 .card-img{
-    width: 30%
+    width: 100%;
 }
 
 .btn{

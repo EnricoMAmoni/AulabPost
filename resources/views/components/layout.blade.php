@@ -14,22 +14,23 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{$title ?? ''}}</title>
 </head>
-<body class="bg-warning">
-    
+
+<body>
+    <div data-aos="fade-down" data-aos-duration="1500">
     
     <x-navbar/>
     
+    </div>
     
 
     
-    <div class="bg-warning">
+    <div>
         
         {{$slot}}
         
     </div>
 
     <x-footer/>
-    
     
 {{-- AOS JS --}}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

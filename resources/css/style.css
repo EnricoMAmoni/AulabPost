@@ -1,36 +1,27 @@
 /* Color */
 
 :root{                      
-    /* --main-color: #0dbe98; */
-    --main-color2: #353A40;
-    --main-color: #FEED00;
-    --main-color: #feec4aae;
+    --main-color-yellow: #FFED4A;
+    --main-color-soft: #FEF9E8;
+    --main-color-medium: #9A9165;
+    --main-color-dark: #1C1018;
 
 
 }
 
-
-
-.bg-dark{
-    background-color: var(--main-color) !important;
+/* BODY */
+body{
+    background-color: var(--main-color-soft)
 }
+
 /* Style */
 
 *{
     font-family: 'Poppins', sans-serif;
 }
 
-.titleMain{
-    font-size: 100px;
-}
 
-
-.claim{
-    font-size: 60px;
-}
-
-/* navbar */
-
+/* NAVBAR */
 
 .nav-reg{
     position: absolute;
@@ -41,19 +32,15 @@
     right: 10%;
 }
 
-.bg-navbar{
-    background: #f5ea4ef8;
+/* .bg-navbar{
+    background: var(--main-color-yellow);
     height: 100px;
-}
+} */
 
 
 .nav2{
-    background-color: rgb(27, 19, 19);
+    background-color: var(--main-color-dark);
     height: 250px;
-}
-
-.div-logo-aulab{
-    margin-top: 35px;
 }
 
 .log{
@@ -75,7 +62,7 @@
 .nav{
     z-index: 999;
     border-bottom: 1px solid rgb(234, 239, 231);
-    background-color: rgb(27, 19, 19) !important;
+    background-color:  var(--main-color-dark) !important;
     position: sticky;
     top:0px;
     width: 100%;
@@ -94,7 +81,7 @@
 }
 
 .nav3{
-   background-color: rgb(27, 19, 19);
+   background-color:  var(--main-color-dark);
     /* position: absolute;
     left: 30%; */
     width: 100%;
@@ -125,25 +112,14 @@
 }
 
 .navt1:hover{
-    color: rgb(127, 252, 3);
+    color: var(--main-color);
     font-weight: bold;   
 }
 
 /* --- HOME --- */
-/* header */
-
-.bg-home{
-    /* background-color: #FEED00; */
-    /* background: linear-gradient(175deg, rgba(216,215,233,1) 0%, rgba(240,255,254,1) 95%, rgba(0,212,255,1) 100%); */
-    
-}
-
 .col-home{
     height: 300px;
 }
-
-
-card-home */
 
 .img-card-home{
     height: 500px;
@@ -156,6 +132,19 @@ card-home */
 
 }
 /* card */
+
+.article-title{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.article-description{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
 
 .div-img{
     width: 30%;
@@ -205,14 +194,48 @@ card-home */
 }
 
 .div-logo-aulab{
-    height: 300px;
-    background-color: white;
-   
-    background-repeat: no-repeat;
-    background-size: cover;
+
     
 }
 
+
+/* CAROSELLO */
+
+.home-carosello{
+    height: 100px;
+}
+
+.home-container-carosello{
+    height: 60vh;
+}
+
+/* FOOTER */
+
+.container-footer{
+    background-color: #353A40;
+}
+
+.footer-list{
+    background-color: #353A40;
+    text-decoration: none;
+    color: white;
+    border-bottom: solid 1px rgb(93, 93, 93);
+}
+
+.footer-list-title{
+    color: #FEED00;
+    padding-bottom: 20px;
+    border-bottom: solid 3px #fff45a;
+}
+
+ul{
+    list-style: none;
+    
+}
+
+a:hover{
+    color: #fbeb01;
+}
 
 
 

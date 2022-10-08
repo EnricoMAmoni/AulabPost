@@ -12,7 +12,7 @@
           </li>
         
           <li class="nav-item">
-            <a class="nav-link textNav1 navt1" href="#"">Economia</a>
+            <a class="nav-link textNav1 navt1" href="#">Economia</a>
           </li>
           <li class="nav-item">
             <a class="nav-link textNav1 navt1" href="#">Food</a>

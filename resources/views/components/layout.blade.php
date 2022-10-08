@@ -14,12 +14,21 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>{{$title ?? ''}}</title>
 </head>
-<body class="bg-home">
+<body class="bg-warning">
+    
+    
     <x-navbar/>
     
-    <div class="bg-home">
+    
+
+    
+    <div class="bg-warning">
+        
         {{$slot}}
+        
     </div>
+
+    <x-footer/>
     
     
 {{-- AOS JS --}}

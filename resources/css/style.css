@@ -9,6 +9,8 @@
 
 }
 
+
+
 .bg-dark{
     background-color: var(--main-color) !important;
 }
@@ -100,7 +102,7 @@
     justify-content: space-evenly;
     position: sticky;
     top:55px;
-    z-index: 999;  
+    z-index: 50;  
 }
 
 .nav5{
@@ -131,7 +133,7 @@
 /* header */
 
 .bg-home{
-    background: rgb(91, 91, 92);
+    /* background-color: #FEED00; */
     /* background: linear-gradient(175deg, rgba(216,215,233,1) 0%, rgba(240,255,254,1) 95%, rgba(0,212,255,1) 100%); */
     
 }
@@ -160,7 +162,7 @@ card-home */
     height: 50%;
     padding: 18px;
     margin:10px;
-    background: linear-gradient(105deg,var(--main-color) 35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(105deg, #ffc107 35%,rgba(0,0,0,0) 35%);
     transition-duration: all 120s ;
 }
 
@@ -170,7 +172,7 @@ card-home */
     padding: 18px;
     margin:10px;
     background: #0dbe98;
-    background: linear-gradient(614deg, var(--main-color)  35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
 }
 
 .aos{
@@ -194,7 +196,22 @@ card-home */
     border: solid 3px black;
     width: 30%;
 }
+.dropdown-menu{
+    z-index: 10000;
+}
 
+.bg-footer{
+    color: var(--main-color2);
+}
+
+.div-logo-aulab{
+    height: 300px;
+    background-color: white;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
 
 
 

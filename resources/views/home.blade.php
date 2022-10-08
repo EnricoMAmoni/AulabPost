@@ -8,7 +8,15 @@
         {{session('message')}}
     </div>
     @endif 
-    <div class="vh-100"></div>
+    {{-- carosello --}}
+    <div class="container bg bg-primary vh-100 d-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col-12 ">
+                <x-carosello/>
+            </div>
+        </div>
+    </div>
+    
     {{-- container di background --}}
         <div class="container bg-white">
             @foreach ($articles as $article)

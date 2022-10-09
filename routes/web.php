@@ -31,6 +31,12 @@ Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesFor
 // rotte per ricerca articoli
 Route::get('/articles/search', [PublicController::class, 'searchArticle'])->name('search.articles');
 
+// rotte tag articoli
+
+Route::post('/tag/{tag}/update', [AdminController::class, 'editTag'])->name('tag.edit');
+Route::delete('/tag/{tag}/delete', [AdminController::class, 'deleteTag'])->name('tag.delete');
+
+
 // rotte gestione utenti
 Route::get('/workWithUs', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request', [PublicController::class, 'sendRoleRequest'])->name('user.role.request');
@@ -39,6 +45,9 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-revisor', [AdminController::class, 'makeUserRevisor'])->name('admin.makeUserRevisor');
     Route::get('/admin/{user}/set-admin', [AdminController::class, 'makeUserAdmin'])->name('admin.makeUserAdmin');
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
+
+    // rotta gestione tag admin
+    Route::post('/tag/store', [AdminController::class, 'storeTag'])->name('tag.store');
 
 });
 

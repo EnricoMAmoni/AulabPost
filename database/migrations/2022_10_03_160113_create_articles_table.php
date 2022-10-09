@@ -20,7 +20,9 @@ return new class extends Migration
             $table->text('body');
             $table->string('img');
             $table->foreignId('user_id')->nullable()->constrained();
-            $table->foreignId('category_id')->nullable()->constrained();
+            // $table->foreignId('category_id')->nullable()->constrained();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelate('SET NULL');
             $table->timestamps();
         });
     }

@@ -2,11 +2,15 @@
 
 :root{                      
     --main-color-yellow: #FFED4A;
+    --main-color-yellow2: #ffc107;
+    --main-color-yellow3: #ffe17e;
     --main-color-soft: #FEF9E8;
     --main-color-medium: #9A9165;
     --main-color-dark: #1C1018;
+}
 
-
+.col-yellow{
+    color: var(--main-color-yellow3);
 }
 
 /* BODY */
@@ -41,6 +45,9 @@ body{
 .nav2{
     background-color: var(--main-color-dark);
     height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .log{
@@ -145,7 +152,6 @@ body{
     font-weight: 300;
 }
 
-
 .div-img{
     width: 30%;
     height: 50%;
@@ -160,13 +166,11 @@ body{
     height: 50%;
     padding: 18px;
     margin:10px;
-    background: #0dbe98;
     background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
 }
 
 .aos{
-    transition-duration: all 5s ;
-    
+    transition-duration: all 5s ;    
 }
 
 .card-img{
@@ -177,7 +181,17 @@ body{
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
+    background-color: var(--main-color-yellow2);
+    border: black solid 1px;
 }
+
+.decoration-img{
+    background: linear-gradient(105deg, #ffc107 35%,rgba(0,0,0,0) 35%) ;
+    background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(547deg, #ffc107  35%,rgba(0,0,0,0) 35%);
+    
+}
+
 
 /* Pagina Show */
 
@@ -198,6 +212,15 @@ body{
     
 }
 
+/* Register and Login */
+
+.border-auth{
+    border-radius: 10%;
+    border: solid 1px black;
+    /* height: 30%; */
+    background-color: var(--main-color-yellow3);
+    padding: 5%;
+}
 
 /* CAROSELLO */
 
@@ -205,8 +228,11 @@ body{
     height: 100px;
 }
 
-.home-container-carosello{
-    height: 60vh;
+.carosello{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* FOOTER */
@@ -237,5 +263,12 @@ a:hover{
     color: #fbeb01;
 }
 
+/* height */
 
+.vh-60{
+    height: 60vh;
+}
 
+.vh-80{
+    height: 80vh;
+}

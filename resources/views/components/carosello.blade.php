@@ -1,7 +1,7 @@
 <div data-aos="fade-up" data-aos-duration="1500">
-    <div class="container-fluid home-container-carosello mt-5">
-        <div class="row justify-content-center align-items-center">
-
+    <div class="container-fluid vh-60 mt-5">
+        <div class="row carosello decoration-img">
+            
 
             <div id="carouselExampleCaptions" class="carousel slide w-50 h-auto" data-bs-ride="false">
                 <div class="carousel-indicators">

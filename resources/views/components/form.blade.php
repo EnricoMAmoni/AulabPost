@@ -24,9 +24,8 @@
                     <div class="mb-3 row">
                         <label class="col-sm-2 col-form-label">Categoria</label>
                         <select  name="category_id" id="" class="col-sm-10 form-control">
-                            @foreach($categories as $category)
-
-                            <option value="{{$category->id}}">{{$category->name}}</option>
+                            @foreach($tags as $tag)
+                            <option value="{{$tag->id}}">{{$tag->name}}</option>
                             @endforeach
                         </select>
                     </div>

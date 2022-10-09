@@ -8,6 +8,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
+use App\Models\Tag;
 
 class ArticleController extends Controller
 {
@@ -28,7 +29,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        $tags = Tag::all();
+        return view('articles.create', compact('tags'));
     }
 
     /**
@@ -39,8 +41,7 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {   
-        // dd($request->all());
-        Auth::user()->articles()->create(
+        $article = Auth::user()->articles()->create(
             [
                 'title'=>$request->input('title'),
                 'description'=>$request->input('description'),
@@ -48,11 +49,14 @@ class ArticleController extends Controller
                 'img'=>$request->file('img')->store("public/img"),
                 'category_id'=>$request->input('category_id')
             ]
-            );
+        );
+            $selectedTags = $request->input('tags');
+            foreach($selectedTags as $tagId)
+            {
+                $article->tags()->attach($tagId);
+            }
 
             return redirect()->route('home')->with("message", "Articolo caricato correttamente");
-
-
     }
 
 

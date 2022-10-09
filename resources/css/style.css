@@ -123,6 +123,8 @@ body{
     font-weight: bold;   
 }
 
+
+
 /* --- HOME --- */
 .col-home{
     height: 300px;
@@ -186,10 +188,9 @@ body{
 }
 
 .decoration-img{
+    background: linear-gradient(547deg, #ffc107  35%,rgba(0,0,0,0) 35%);
     background: linear-gradient(105deg, #ffc107 35%,rgba(0,0,0,0) 35%) ;
     background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
-    background: linear-gradient(547deg, #ffc107  35%,rgba(0,0,0,0) 35%);
-    
 }
 
 

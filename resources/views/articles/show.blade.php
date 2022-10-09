@@ -18,7 +18,7 @@
                         @else
                         <p>{{$article->body}}</p>
                         @endif
-                        {{-- <a href="{{route('articles.category', $article->category)}}" class="card-text">{{$article->category->name}}</a> --}}
+                        <a href="{{route('articles.category', $article->category)}}" class="card-text">{{$article->category->name}}</a>
                         <div class="d-flex">
                             <p>Tag : </p>
                             @foreach($article->tags as $tag)

@@ -31,10 +31,7 @@ Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesFor
 // rotte per ricerca articoli
 Route::get('/articles/search', [PublicController::class, 'searchArticle'])->name('search.articles');
 
-// rotte tag articoli
 
-Route::post('/tag/{tag}/update', [AdminController::class, 'editTag'])->name('tag.edit');
-Route::delete('/tag/{tag}/delete', [AdminController::class, 'deleteTag'])->name('tag.delete');
 
 
 // rotte gestione utenti
@@ -45,9 +42,16 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-revisor', [AdminController::class, 'makeUserRevisor'])->name('admin.makeUserRevisor');
     Route::get('/admin/{user}/set-admin', [AdminController::class, 'makeUserAdmin'])->name('admin.makeUserAdmin');
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
-
-    // rotta gestione tag admin
+    
+    // rotte gestione tag admin
+    Route::post('/tag/{tag}/update', [AdminController::class, 'editTag'])->name('tag.edit');
+    Route::delete('/tag/{tag}/delete', [AdminController::class, 'deleteTag'])->name('tag.delete');
     Route::post('/tag/store', [AdminController::class, 'storeTag'])->name('tag.store');
+
+    // rotte gestione gategorie
+    Route::post('/category/{category}/update', [AdminController::class, 'editCategory'])->name('category.edit');
+    Route::delete('/category/{category}/delete', [AdminController::class, 'deleteCategory'])->name('category.delete');
+    Route::post('/category/store', [AdminController::class, 'storeCategory'])->name('category.store');
 
 });
 

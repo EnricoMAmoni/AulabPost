@@ -21,8 +21,14 @@ return new class extends Migration
         });
 
         $names = [
-            'politica', 'economia', 'food', 'sport', 'intrattenimento', 'tech'
+            'politica',
+            'economia', 
+            'food', 
+            'sport', 
+            'intrattenimento', 
+            'tech'
         ];
+
         foreach($names as $name)
         {
             Tag::create(['name' => $name]);

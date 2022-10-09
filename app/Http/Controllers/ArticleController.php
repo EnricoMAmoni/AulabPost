@@ -50,6 +50,7 @@ class ArticleController extends Controller
                 'category_id'=>$request->input('category_id')
             ]
         );
+        
             $selectedTags = $request->input('tags');
             foreach($selectedTags as $tagId)
             {

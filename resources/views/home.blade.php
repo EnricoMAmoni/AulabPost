@@ -22,7 +22,7 @@
             @foreach ($articles as $article)
             <hr class="bg-danger border-1 border-top border-danger w-100 text-center">
                 @if ($count % 2 == 0)
-                    <div data-aos="fade-right" data-aos-duration="1500">
+                    {{-- <div data-aos="fade-up" data-aos-duration="1500"> --}}
                         <div class="container my-5" style="width: 100%; heigth:300px">
                             <div class="row">
                                 <div class="col-12 col-md-4 div-img ">
@@ -36,9 +36,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                 @else 
-                    <div data-aos="fade-left" data-aos-duration="1500" class="aos">
+                    {{-- <div data-aos="fade-up" data-aos-duration="1500" class="aos"> --}}
                         <div class="container my-5" style="width: 100%; heigth:300px">
                             <div class="row justify-content-end">
                                 <div class="col-12 col-md-6 mt-3 text-end">
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {{-- </div> --}}
                 @endif
                 @php $count++; @endphp
             @endforeach

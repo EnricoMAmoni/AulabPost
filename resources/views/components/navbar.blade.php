@@ -1,5 +1,6 @@
 <nav class="navbar nav navbar-expand-lg bg-light">
     <div class="container-fluid">
+
       <a class="navbar-brand textNav1" href="{{route('home')}}">Post <i class="fa-regular fa-newspaper"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,6 +33,10 @@
             
             @csrf
           </form>
+
+          <div class="navbar-div-logo-dinamico">
+            <a href=""><img class="img-fluid navbar-logo-dinamico d-none" src="media/AulabPost-3.png" alt=""></a>
+          </div>
 
           {{-- NOME CHE SCENDE --}}
 

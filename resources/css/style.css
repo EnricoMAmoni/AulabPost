@@ -1,8 +1,8 @@
 /* Color */
 
 :root{                      
-    --main-color-yellow: #FFED4A;
-    --main-color-yellow2: #ffc107;
+    --main-color-yellow2: #FFED4A;
+    /* --main-color-yellow2: #ffc107; */
     --main-color-yellow3: #ffe17e;
     --main-color-soft: #FEF9E8;
     --main-color-medium: #9A9165;
@@ -35,6 +35,15 @@ body{
     top: 70%;
 }
 
+.navbar-logo-dinamico{
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.custom-opacity{
+    opacity: 1;
+}
+
 .nav-reg{
     position: absolute;
     right: 2%;
@@ -57,6 +66,7 @@ body{
     align-items: center;
     justify-content: center;
     z-index: 50;
+    background: linear-gradient(105deg, var(--main-color-yellow2) 6%,var(--main-color-dark) 6%);
 
 }
 
@@ -134,8 +144,6 @@ body{
 }
 
 
-
-
 /* --- HOME --- */
 .col-home{
     height: 300px;
@@ -170,7 +178,7 @@ body{
     height: 50%;
     padding: 18px;
     margin:10px;
-    background: linear-gradient(105deg, #ffc107 35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(105deg, var(--main-color-yellow2) 35%,rgba(0,0,0,0) 35%);
     transition-duration: all 120s ;
 }
 
@@ -179,7 +187,7 @@ body{
     height: 50%;
     padding: 18px;
     margin:10px;
-    background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(614deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
 }
 
 .aos{
@@ -194,14 +202,14 @@ body{
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
-    background-color: var(--main-color-yellow2);
+    background-color: var(--main-color-dark);
     border: black solid 1px;
 }
 
 .decoration-img{
-    background: linear-gradient(547deg, #ffc107  35%,rgba(0,0,0,0) 35%);
-    background: linear-gradient(105deg, #ffc107 35%,rgba(0,0,0,0) 35%) ;
-    background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(547deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
+    background: linear-gradient(105deg, var(--main-color-yellow2) 35%,rgba(0,0,0,0) 35%) ;
+    background: linear-gradient(614deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
 }
 
 
@@ -220,19 +228,53 @@ body{
     color: var(--main-color2);
 }
 
-.div-logo-aulab{
-
-    
-}
-
 /* Register and Login */
 
 .border-auth{
-    border-radius: 10%;
-    border: solid 1px black;
+    /* border-radius: 10%; */
+    /* border: solid 1px black; */
+    box-shadow: #1C1018 2px;
     /* height: 30%; */
     background-color: var(--main-color-yellow3);
     padding: 5%;
+    font-size: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 40px 0 rgba(0, 0, 0, 0.19);
+    color: rgb(97, 96, 96);
+    background-image: url(/public/media/yellowBG.jpg);
+    border-radius: 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    
+}
+
+.aLOG{
+    color: rgb(211, 78, 78);
+}
+.aLOG:hover{
+    color: black;
+}
+
+
+.paragrafLog{
+    font-size: 12px;
+    text-align: end;
+    color: #99a9bc;
+    
+
+}
+.loginButton{
+   width: 20%;
+   border: none;
+
+}
+
+
+input,
+input::placeholder {
+    font: 12px/3 sans-serif;
+    font-style: oblique;
+    
 }
 
 /* CAROSELLO */
@@ -262,9 +304,9 @@ body{
 }
 
 .footer-list-title{
-    color: #FEED00;
+    color: var(--main-color-yellow2);
     padding-bottom: 20px;
-    border-bottom: solid 3px #fff45a;
+    border-bottom: solid 3px var(--main-color-yellow2);
 }
 
 ul{
@@ -273,7 +315,7 @@ ul{
 }
 
 a:hover{
-    color: #fbeb01;
+    color: var(--main-color-yellow2);
 }
 
 /* height */

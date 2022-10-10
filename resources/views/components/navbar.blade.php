@@ -35,7 +35,7 @@
           </form>
 
           <div class="navbar-div-logo-dinamico">
-            <a href=""><img class="img-fluid navbar-logo-dinamico d-none" src="media/AulabPost-3.png" alt=""></a>
+            <a href=""><img class="img-fluid navbar-logo-dinamico" src="media/AulabPost-3.png" alt=""></a>
           </div>
 
           {{-- NOME CHE SCENDE --}}

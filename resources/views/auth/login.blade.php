@@ -1,9 +1,9 @@
 <x-layout>
    
 
-    <div class="container">
-        <div class="row vh-60 justify-content-center align-items-center ">
-            <h3 class="text-center fs-1 mt-5">Accedi</h3>
+<div class="container mb-5 mt-5">
+        <div class="row vh-80 justify-content-center align-items-center ">
+            <!-- <h3 class="text-center fs-1 mt-5">Accedi</h3> -->
             <div class="col-12 col-md-6 col-lg-6  border-auth">
                 <form action="{{route('login')}}" method="POST">
                     @csrf
@@ -25,7 +25,14 @@
                             @enderror
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success">Accedi</button>
+                    <div class="row justify-content-center mt-4">
+
+                        <button type="submit" class="btn btn-success loginButton">Accedi</button>
+                    </div>
+                    <div class="row mt-5">
+
+                        <p class="paragrafLog">Non sei ancora registrato? <a href="{{route('register')}}" class="aLOG">Registrati</a></p>
+                    </div>
                 </form>
             </div>
         </div>

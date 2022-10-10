@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Mail\ContactRoleMail;
 use App\Mail\RequestRoleMail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -31,7 +32,22 @@ class PublicController extends Controller
         $email = $request->input('email');
         $presentation = $request->input('presentation');
         $requestMail = new RequestRoleMail(compact('role', 'email', 'presentation'));
+        $contactRequestMail = new ContactRoleMail(compact('role', 'email', 'presentation'));
         Mail::to('admin@blog.it')->send($requestMail);
+        switch ($role) {
+            case 'admin':
+                $user->is_admin= NULL;
+                break;
+
+            case 'revisor':
+                $user->is_revisor= NULL;
+                break;
+
+            case 'writer':
+                $user->is_writer= NULL;
+                break;
+        }
+        Mail::to($email)->send($contactRequestMail);
         switch ($role) {
             case 'admin':
                 $user->is_admin= NULL;

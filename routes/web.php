@@ -35,9 +35,11 @@ Route::get('/articles/search', [PublicController::class, 'searchArticle'])->name
 
 
 
-// rotte gestione utenti
+// rotte lavora con noi
 Route::get('/workWithUs', [PublicController::class, 'workWithUs'])->name('work.with.us');
 Route::post('/user/send-role-request', [PublicController::class, 'sendRoleRequest'])->name('user.role.request');
+
+// rotte admin
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/{user}/set-revisor', [AdminController::class, 'makeUserRevisor'])->name('admin.makeUserRevisor');

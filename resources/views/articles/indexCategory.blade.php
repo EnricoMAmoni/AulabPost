@@ -1,4 +1,4 @@
-<x-layout>
+{{-- <x-layout>
 
     <x-navbar3/>
 
@@ -23,5 +23,38 @@
         @endforeach
       
   </div>
+</div>
+</x-layout> --}}
+<x-layout>
+
+  <x-navbar3/>
+
+
+  @if(session('message'))
+  <div class="alert alert-success">
+    {{session('message')}}
+  </div>
+  @endif
+  <div class="container-fluid bg-home  mt-5 vh-100">
+    <div class="row justify-content-center">
+      @foreach ($articles as $article)
+      <h1 class="categoryMainTitle">{{ $article->category->name }}:</h1>
+      <div class="cardCategory">
+          <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="{{$article->title}}">
+          <div class="card-body">
+
+            <h5 class="card-title">{{$article->title}}</h5>
+
+            <p class="card-decription">{{substr($article->description, 0, 50)}}</p>
+
+            <p class="card-text"> {{substr($article->body, 0, 20)}} ...</p>
+
+            <a href="{{route('articles.show', $article)}}" class="continuaAleggere">Continua a leggere</a>
+          </div>
+        </div>
+
+      @endforeach
+
+</div>
 </div>
 </x-layout>

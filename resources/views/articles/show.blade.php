@@ -20,7 +20,7 @@
                    
                 
             <div class="col-12 col-md-5">
-                <img src="https://picsum.photos/1000/500" class="card-img-top" alt="{{$article->title}}">
+                <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="{{$article->title}}">
                 
             </div>
             <div class="col-11">

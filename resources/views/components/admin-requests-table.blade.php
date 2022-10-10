@@ -1,4 +1,4 @@
-<table class="table text-white">
+<table class="table text-black">
    <thead>
         <tr>
             <th scope="col">#</th>

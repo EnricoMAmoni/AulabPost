@@ -150,7 +150,7 @@ body{
 }
 
 .img-card-home{
-    height: 500px;
+    height: 100px;
 }
 
 .card-home{
@@ -391,4 +391,41 @@ a:hover{
 }
 .text-container{
     word-wrap: break-word;
+}
+
+
+
+/* Pagina index category */
+
+.cardCategory{
+    /* width: 20%; */
+
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-title{
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card-decription{
+    font-family: 'Oswald', sans-serif;
+
+
+}
+
+.continuaAleggere{
+    font-weight: bold;
+    font-size: 10px;
+    color: #353A40;
+    display: flex;
+    justify-content: center;
+}
+
+.categoryMainTitle{
+    margin-bottom:2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #949494;
+    font-style: oblique;
 }

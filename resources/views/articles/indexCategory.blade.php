@@ -35,13 +35,12 @@
     {{session('message')}}
   </div>
   @endif
-  <div class="container-fluid bg-home  mt-5 vh-100">
-    <div class="row justify-content-center">
+  <div class="container-fluid bg-home  mt-5 ">
+    <div class="row justify-content-evenly">
       @foreach ($articles as $article)
-      <h1 class="categoryMainTitle">{{ $article->category->name }}:</h1>
-      <div class="cardCategory">
-          <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="{{$article->title}}">
-          <div class="card-body">
+      <div class=" col-12 col-md-3 ">
+          <div class="cardCategory card-body justify-content-evenly  ">
+            <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="{{$article->title}}">
 
             <h5 class="card-title">{{$article->title}}</h5>
 
@@ -51,9 +50,9 @@
 
             <a href="{{route('articles.show', $article)}}" class="continuaAleggere">Continua a leggere</a>
           </div>
-        </div>
-
-      @endforeach
+            
+      </div>
+            @endforeach
 
 </div>
 </div>

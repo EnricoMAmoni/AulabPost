@@ -16,19 +16,14 @@
 </head>
 
 <body>
-    <div data-aos="fade-down" data-aos-duration="1500">
     
     <x-navbar/>
     
-    </div>
-    
 
-    
-    <div>
         
-        {{$slot}}
+    {{$slot}}
         
-    </div>
+
     
 
     <x-footer/>

@@ -7,7 +7,7 @@
         </div>
         <div class="row pt-5 pb-5 justify-content-evenly align-items-center">
                 
-            <div class="col-12 col-md-5 text-container">
+            <div class="col-12 col-md-5 text-container article-description">
                 
                 @if (strpos($article->description, 'http') !== false)
                     <h4><a href="{{$article->description}}">{{$article->description}}</a></h4>
@@ -15,23 +15,24 @@
                     <h4>{{$article->description}}</h4>
                 @endif
 
-                    <p>Pubblicato da : <a href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
+                    <p class="article-author">Pubblicato da : <a class="article-author" href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
             </div>         
                    
                 
-            <div class="col-12 col-md-5">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top img-fluid" alt="{{$article->title}}">
-                
+            <div class="col-12 col-md-5 div-img-show ">
+                <img src="{{Storage::url($article->img)}}" class="card-img-top card-img-show "  alt="{{$article->title}}">
             </div>
             <div class="col-11">
 
-                <div class="text-container">
+                <div class="text-container article">
                     @if  (strpos($article->body, 'http') !== false)
                         <p><a href="{{$article->body}}">{{$article->body}}</a></p>        
                     @else        
                         <p>{{$article->body}}</p        >
                     @endif                
                 </div>
+
+                <p class="article-author">Pubblicato il : {{$article->created_at->format('d/m/Y')}}</p>
 
 
 

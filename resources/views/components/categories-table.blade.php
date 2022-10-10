@@ -18,7 +18,7 @@
                 <form action = "{{ route('category.edit', $category) }}" method="post" class="w-50">
                     @csrf 
                     <input type="text" class="form-control" placeholder="nuovo nome" name="name">
-                    <button class="btn btn-info" type="submit">Salva</button>
+                    <button class="btn btn-save" type="submit">Salva</button>
 
                 </form>
             </td>
@@ -26,7 +26,7 @@
                 <form action="{{route('category.delete', $category)}}" class="w-50" method="post">
                     @csrf 
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Elimina</button>
+                    <button class="btn btn-delete" type="submit">Elimina</button>
                 </form>
 
             </td>

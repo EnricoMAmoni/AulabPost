@@ -291,3 +291,6 @@ a:hover{
 .altezzaFormCreate {
     height: 1000px;
 }
+.text-container{
+    word-wrap: break-word;
+}

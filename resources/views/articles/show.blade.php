@@ -1,6 +1,52 @@
 <x-layout>
     <x-navbar3/>
-    <div class="container mb-5">
+    <div class="container bg bg-light  pt-10">
+
+        <div>
+            <h2 class="text-center">{{$article->title}}</h2>    
+        </div>
+        <div class="row pt-5 pb-5 justify-content-evenly align-items-center">
+                
+            <div class="col-12 col-md-5 text-container">
+                
+                @if (strpos($article->description, 'http') !== false)
+                    <h4><a href="{{$article->description}}">{{$article->description}}</a></h4>
+                @else
+                    <h4>{{$article->description}}</h4>
+                @endif
+
+                    <p>Pubblicato da : <a href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
+            </div>         
+                   
+                
+            <div class="col-12 col-md-5">
+                <img src="https://picsum.photos/1000/500" class="card-img-top" alt="{{$article->title}}">
+                
+            </div>
+            <div class="col-11">
+
+                <div class="text-container">
+                    @if  (strpos($article->body, 'http') !== false)
+                        <p><a href="{{$article->body}}">{{$article->body}}</a></p>        
+                    @else        
+                        <p>{{$article->body}}</p        >
+                    @endif                
+                </div>
+
+
+
+            </div>
+            
+
+         </div>
+    </div>
+
+
+
+
+
+
+    {{-- <div class="container mb-5">
         <div class="row justify-content-center mt-5 ">
             <div class="col-12 col-md-6">
                 <div class="card mt-5">
@@ -31,5 +77,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-layout>

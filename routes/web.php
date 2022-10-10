@@ -24,11 +24,12 @@ Route::middleware('writer')->group(function(){
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
 });
+// rotte viste articoli
 Route::get('/articles/{article}/show', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/articles/{category}/indexCategory', [ArticleController::class, 'articlesForCategory'])->name('articles.category');
 Route::get('/articles/{user}/indexUser', [ArticleController::class, 'articlesForUser'])->name('articles.user');
 
-// rotte per ricerca articoli
+// rotta per ricerca articoli
 Route::get('/articles/search', [PublicController::class, 'searchArticle'])->name('search.articles');
 
 
@@ -43,7 +44,7 @@ Route::middleware('admin')->group(function(){
     Route::get('/admin/{user}/set-admin', [AdminController::class, 'makeUserAdmin'])->name('admin.makeUserAdmin');
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
     
-    // rotte gestione tag admin
+    // rotte gestione tag 
     Route::post('/tag/{tag}/update', [AdminController::class, 'editTag'])->name('tag.edit');
     Route::delete('/tag/{tag}/delete', [AdminController::class, 'deleteTag'])->name('tag.delete');
     Route::post('/tag/store', [AdminController::class, 'storeTag'])->name('tag.store');
@@ -55,7 +56,7 @@ Route::middleware('admin')->group(function(){
 
 });
 
-// rotte per revisore
+// rotte per il revisore
 Route::middleware('revisor')->group(function(){
     Route::get('/revisor/dashboard', [RevisorController::class, 'revisorDashboard'])->name('revisor.dashboard');
     Route::get('/revisor/article/{article}/detail', [RevisorController::class, 'articleDetail'])->name('revisor.detail');

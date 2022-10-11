@@ -18,7 +18,7 @@
                                     <span> #{{$tag->name}} </span>
                                 @endforeach
                             </div>
-                            <a href="{{route('articles.category', $article->category)}}" class="me-3 col-yellow">#{{$article->category->name}}</a>
+                            <a href="{{route('articles.category', $article->category)}}" class="category-ancor">#{{$article->category->name}}</a>
                             <a href="{{route('articles.show', $article)}}" class="btn me-3">Leggi</a>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                     <span> #{{$tag->name}} </span>
                                 @endforeach
                             {{-- </div> --}}
-                            <a href="{{route('articles.category', $article->category)}}" class="me-3 col-yellow">#{{$article->category->name}}</a>
+                            <a href="{{route('articles.category', $article->category)}}" class="category-ancor">#{{$article->category->name}}</a>
                             <a href="{{route('articles.show', $article)}}" class="btn me-3">Leggi</a>
                         </div>
                         <div class="col-12 col-md-6 div-img-right text-center">

@@ -79,4 +79,20 @@
             </div>
         </div>
     </div> --}}
+
+
+{{-- TEST VISTA SHOW --}}
+
+    {{-- <div class="container">
+        <div class="row">
+
+            <div class="col-12">
+                <img src="{{Storage::url($article->img)}}" class="card-img-top card-img-show img-fluid"  alt="{{$article->title}}">
+
+            </div>
+        </div>
+        <div class="row">
+
+        </div>
+    </div> --}}
 </x-layout>

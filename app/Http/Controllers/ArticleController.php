@@ -78,14 +78,18 @@ class ArticleController extends Controller
 
         $articles = Article::where('category_id', $category->id)->where('is_accepted', true)->orderBy('created_at', 'DESC')->get();
 
-        return view('articles.indexCategory', compact('articles', 'category'));
+        $count = 0;
+
+        return view('articles.indexCategory', compact('articles', 'category', 'count'));
     }
 
     public function articlesForUser(User $user){
 
         $articles = Article::where('user_id', $user->id)->orderBy('created_at', 'DESC')->get();
 
-        return view('articles.indexUser', compact('articles', 'user'));
+        $count = 0;
+
+        return view('articles.indexUser', compact('articles', 'user', 'count'));
     }
 
 

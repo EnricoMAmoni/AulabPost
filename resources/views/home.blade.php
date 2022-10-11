@@ -13,12 +13,16 @@
     </div>
     @endif 
 
+   
+
     {{-- carosello --}}
     <x-carosello/>
+    <x-article-card :articles="$articles" :count="$count"/>
+
 
 
     {{-- container di background --}}
-        <div class="container bg-white ">
+        {{-- <div class="container bg-white ">
             @foreach ($articles as $article)
             <hr class="bg-danger border-1 border-top border-danger w-100 text-center">
                 @if ($count % 2 == 0)
@@ -60,5 +64,5 @@
                 @endif
                 @php $count++; @endphp
             @endforeach
-        </div>
+        </div> --}}
 </x-layout>

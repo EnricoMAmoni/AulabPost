@@ -1,7 +1,18 @@
 <x-layout>
 
     <x-navbar3/>
-    <div class="container">
+
+
+    <div>
+      @foreach ($articles as $article)
+      <h2>Articoli di: {{$article->user->name}}</h2>
+      @endforeach
+    </div>
+
+
+    <x-article-card :articles="$articles" :count="$count"/>
+
+    {{-- <div class="container">
         <div class="row">
             @foreach ($articles as $article)
             <div class="card mt-5" style="width: 18rem;">
@@ -17,6 +28,6 @@
             @endforeach
         </div>
     
-    </div>
+    </div> --}}
     
     </x-layout>

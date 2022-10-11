@@ -4,7 +4,7 @@
 
             {{-- <img src="https://picsum.photos/500/200" alt=""> --}}
 
-            <img class="img-fluid" src="media/AulabPost-2.png" alt="">
+            <img class="img-fluid" src="media/AulabPost-2.png" alt="aulab post logo">
             
             
         </div>

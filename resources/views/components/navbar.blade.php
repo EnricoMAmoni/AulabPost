@@ -19,20 +19,11 @@
           </li>
           @else
 
-          {{-- bottone inserimento articolo --}}
-          <li class="nav-item">
-            <a class="nav-link textNav1" href="{{route('articles.create')}}">Inserisci articolo</a>
-          </li>
+          
 
           
         
-          <a class="nav-link nav-reg textNav1" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> Logout </a>               
-          <form id="logout-form"action="{{route('logout')}}" method="POST">
-
-            
-            
-            @csrf
-          </form>
+          
 
           <div class="navbar-div-logo-dinamico">
             <a href=""><img class="img-fluid navbar-logo-dinamico" src="media/AulabPost-3.png" alt=""></a>
@@ -47,19 +38,44 @@
 
             {{-- aggiustare dropdown --}}
             <ul class="dropdown-menu bg" aria-labelledby="dropdownMenuLink">
+              @if(Auth::user() && Auth::user()->is_admin)
               <li class="nav-item">
                 <a class="nav-link textNav1" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
               </li>
+              @endif
               
+              @if(Auth::user() && Auth::user()->is_revisor)
               <li class="nav-item">
                 <a class="nav-link textNav1" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
               </li>
-              
+              @endif
+                  
+              @if(Auth::user() && Auth::user()->is_writer)
+              {{-- bottone inserimento articolo --}}
+              <li class="nav-item">
+                <a class="nav-link textNav1" href="{{route('articles.create')}}">Inserisci articolo</a>
+              </li>    
+              @endif
+
+              @if(Auth::user() && Auth::user()->is_writer && Auth::user()->is_revisor && Auth::user()->is_admin)
+              @else
               <li class="nav-item">
                 <a class="nav-link textNav1" href="{{route('work.with.us')}}">Lavora con noi</a>
               </li>
+              @endif
+              
+              {{-- logout --}}
+              <li class="nav-item">
+                <a class="nav-link  textNav1" href="#" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> Logout </a>               
+                <form id="logout-form"action="{{route('logout')}}" method="POST">
+                  @csrf
+                </form>
+              </li>
             </ul>
-            </div>
+          </div>
+
+            
+            
 
           
 

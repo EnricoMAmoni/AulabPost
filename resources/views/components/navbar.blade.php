@@ -1,7 +1,7 @@
 <nav class="navbar nav1 navbar-expand-lg text-nav">
     <div class="container-fluid">
-
-      <a class="navbar-brand textNav" href="{{route('home')}}">Post <i class="fa-regular fa-newspaper"></i></a>
+      
+      <a class="navbar-brand textNav" href="{{route('home')}}"> <img src="media/VIRGOLETTE.png" class="img-logo-nav ms-3" alt="logo aulab post"> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

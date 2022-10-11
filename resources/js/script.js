@@ -8,10 +8,10 @@ window.addEventListener('scroll', function(){
     scrollpos = window.scrollY;
 
 
-    if(scrollpos > 170){
+    if(scrollpos > 100){
         navbarLogo.classList.add('custom-opacity');
     }
-    if(scrollpos < 170){
+    if(scrollpos < 100){
         navbarLogo.classList.remove('custom-opacity');
     }
 });

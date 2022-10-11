@@ -1,6 +1,5 @@
 <x-layout>
    
-
 <div class="container mb-5 mt-5">
         <div class="row vh-80 justify-content-center align-items-center ">
             <!-- <h3 class="text-center fs-1 mt-5">Accedi</h3> -->
@@ -27,11 +26,11 @@
                     </div>
                     <div class="row justify-content-center mt-4">
 
-                        <button type="submit" class="btn btn-success loginButton">Accedi</button>
+                        <button type="submit" class="btn auth-button">Accedi</button>
                     </div>
                     <div class="row mt-5">
 
-                        <p class="paragrafLog">Non sei ancora registrato? <a href="{{route('register')}}" class="aLOG">Registrati</a></p>
+                        <p class="p-auth">Non sei ancora registrato? <a href="{{route('register')}}" class="ancor-auth">Registrati</a></p>
                     </div>
                 </form>
             </div>

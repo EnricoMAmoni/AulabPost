@@ -1,6 +1,6 @@
 <x-layout>
     <x-navbar3/>
-    <div class="container bg bg-light  pt-10">
+    <div class="container bg pt-10 my-5">
 
         <div>
             <h2 class="text-center">{{$article->title}}</h2>    
@@ -20,11 +20,11 @@
                    
                 
             <div class="col-12 col-md-5 div-img-show ">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top card-img-show "  alt="{{$article->title}}">
+                <img src="{{Storage::url($article->img)}}" class="card-img-top"  alt="{{$article->title}}">
             </div>
             <div class="col-11">
 
-                <div class="text-container article">
+                <div class="text-container article-body">
                     @if  (strpos($article->body, 'http') !== false)
                         <p><a href="{{$article->body}}">{{$article->body}}</a></p>        
                     @else        

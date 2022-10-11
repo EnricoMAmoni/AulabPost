@@ -45,9 +45,9 @@
                     </div>
                     <div class="row justify-content-center">
 
-                        <button type="submit" class="btn loginButton btn-success">Registrati</button>
+                        <button type="submit" class="btn auth-button">Registrati</button>
                     </div>
-                    <p class="paragrafLog">Sei già registrato? <a href="{{route('login')}}" class="aLOG">Accedi</a></p>
+                    <p class="p-auth">Sei già registrato? <a href="{{route('login')}}" class="ancor-auth">Accedi</a></p>
                 </form>
             </div>
         </div>

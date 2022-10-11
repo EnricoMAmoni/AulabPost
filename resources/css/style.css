@@ -1,3 +1,10 @@
+ /*  NOMI PARLANTI PER CLASSI CSS   */
+/* vista-tag-funzione */
+/* e inserire le classi nella giusta sezione in css */
+/* body, navbar, footer etc */
+
+/*  */
+
 /* Color */
 
 :root{                      
@@ -16,11 +23,31 @@ body{
     background-color: var(--main-color-soft)
 }
 
-/* Font Defoult */
+/* Font Default */
 
 *{
     font-family: 'Poppins', sans-serif;
 }
+
+/* style ul e hover links */
+ul{
+    list-style: none;
+}
+
+a:hover{
+    color: var(--main-color-yellow2);
+}
+
+/*generic height */
+
+.vh-60{
+    height: 60vh;
+}
+
+.vh-80{
+    height: 80vh;
+}
+
 
 /* Navbar */
 
@@ -31,6 +58,10 @@ body{
 .textNav:hover{
     color: var(--main-color-yellow1);
     font-weight: bold;   
+}
+
+.img-logo-nav{ 
+    height: 3vh;
 }
 
 /* Navbar 1 */
@@ -46,6 +77,11 @@ body{
 .dropdown-user{
     text-decoration: none!important;
 
+}
+
+.dropdown-menu{
+    background-color: var(--main-color-dark);
+    border: solid 1px white;
 }
 
 .navbar-div-logo-dinamico{
@@ -82,7 +118,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(105deg, var(--main-color-yellow2) 6%,var(--main-color-dark) 6%);
+    border-bottom: 1px solid rgb(234, 239, 231);
+    /* background: linear-gradient(105deg, var(--main-color-yellow2) 6%,var(--main-color-dark) 6%); */
 }
 
 .logo-nav2{
@@ -95,7 +132,8 @@ body{
    background-color:  var(--main-color-dark);
    position: sticky;
    top:4vh;
-   border-top: 1px solid rgb(234, 239, 231);
+   /* border-top: 1px solid rgb(234, 239, 231); */
+   z-index: 999;
 }
 
 .list-nav3{
@@ -105,38 +143,22 @@ body{
 }
 
 
-
-
-/* .log4{
-    color: rgb(224, 213, 213);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 150px;
-} */
-/* 
-.log5{
-    font-style: oblique;
-    color: rgb(74, 182, 182);
-    font-size: 20px;
-} */
-
-
 /* --- HOME --- */
-.col-home{
-    height: 300px;
+
+/* Card borders*/
+.articles-border{
+    background-color: var(--main-color-soft);
+    border-left: solid 2px lightgray;
+    border-right: solid 2px lightgray;
 }
 
-.img-card-home{
-    height: 100px;
+.hr-article{
+    border: lightgray;
+    width:80%;
+    margin: auto;
 }
 
-.card-home{
-    height: 100px;
-    margin-bottom: 200px;
-    width: 80%;
-
-}
-
-/* card */
+/* Fonts delle Card */
 
 .article-description{
     font-family: 'Oswald', sans-serif;
@@ -156,28 +178,37 @@ body{
     font-weight: 200;
 }
 
-.article{
+.article-body{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     font-weight: 250;
 }
 
-.div-img{
-    width: 30%;
+
+.article-category{
+    color: var(--main-color-yellow3);
+    margin-right: 1rem;
+}
+
+
+.div-img-card{
+    /* CAMBIARE DIMENSIONE IMMAGINI DA FARE RESPONSIVE */
+    /* width: 30%;*/
     height: 50%;
     padding: 18px;
     margin:10px;
     background: linear-gradient(105deg, var(--main-color-yellow2) 35%,rgba(0,0,0,0) 35%);
-    transition-duration: all 120s ;
 }
 
-.div-img-right{
-    width: 30%;
+.div-img-card-right{
+    /* width: 30%; */
     height: 50%;
     padding: 18px;
     margin:10px;
     background: linear-gradient(614deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
 }
+
+/* vista show */
 
 .div-img-show{
     /* width: 70%; */
@@ -187,14 +218,7 @@ body{
     background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
 }
 
-.aos{
-    transition-duration: all 5s ;    
-}
-
-.card-img{
-    width: 100%;
-}
-
+/* bottoni */
 .btn{
     text-transform: uppercase;
     font-size: 12px;
@@ -237,42 +261,25 @@ body{
     color: black;
 }
 
-.decoration-img{
-    background: linear-gradient(547deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
-    background: linear-gradient(105deg, var(--main-color-yellow2) 35%,rgba(0,0,0,0) 35%) ;
-    background: linear-gradient(614deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
-}
 
-/* aggiornamento sezione card */
 
-.category-ancor{
-    color: var(--main-color-yellow3);
-    margin-right: 1rem;
-}
+
 
 
 /* Pagina Show */
 
-.border-show{
+/* .border-show{
     border: solid 3px black;
     width: 30%;
-}
-.dropdown-menu{
-    background-color: var(--main-color-dark);
-    border: solid 1px white;
-}
+} */
 
-.bg-footer{
-    color: var(--main-color2);
-}
+
+
 
 /* Register and Login */
 
 .border-auth{
-    /* border-radius: 10%; */
-    /* border: solid 1px black; */
     box-shadow: #1C1018 2px;
-    /* height: 30%; */
     background-color: var(--main-color-yellow3);
     padding: 5%;
     font-size: 15px;
@@ -283,52 +290,73 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-weight: bold;
-    
 }
 
-.aLOG{
+.ancor-auth{
     color: rgb(211, 78, 78);
 }
-.aLOG:hover{
+.ancor-auth:hover{
     color: black;
 }
 
-
-.paragrafLog{
+.p-auth{
     font-size: 12px;
     text-align: end;
     color: #99a9bc;
     
-
 }
-.loginButton{
+
+.auth-button{
    width: 20%;
    border: none;
-
 }
-
 
 input,
 input::placeholder {
     font: 12px/3 sans-serif;
     font-style: oblique;
-    
 }
+
+
+
+
 
 /* CAROSELLO */
 
-.home-carosello{
-    height: 100px;
-}
-
 .carosello{
-    height: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
+    height: 60vh;
+}
+
+.virgolette-gialle{
+    
+    height: 10vh;
+    z-index: 999;
+    
+}
+
+.div-virgolette-gialle{
+    position:absolute;
+    left: 68vw;
+    top:-3vh;
+    height: 10vh;
+    width: 7vh;
+    z-index: 999;
+}
+
+
+.img-carosello{
+    width: 130vh;
+    /* height: 100vh; */
 }
 
 /* FOOTER */
+
+.bg-footer{
+    color: var(--main-color2);
+}
 
 .container-footer{
     background-color: black;
@@ -347,67 +375,16 @@ input::placeholder {
     border-bottom: solid 3px var(--main-color-yellow2);
 }
 
-ul{
-    list-style: none;
-    
-}
-
-a:hover{
-    color: var(--main-color-yellow2);
-}
-
-/* height */
-
-.vh-60{
-    height: 60vh;
-}
-
-.vh-80{
-    height: 80vh;
-}
 
 
+
+/* pagina inserimento articolo */
 /* momentanea */
 .altezzaFormCreate {
     height: 1000px;
 }
-.text-container{
+
+/* .text-container{
     word-wrap: break-word;
-}
+} */
 
-
-
-/* Pagina index category */
-
-.cardCategory{
-    /* width: 20%; */
-
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card-title{
-    font-weight: bold;
-    font-family: 'Oswald', sans-serif;
-}
-
-.card-decription{
-    font-family: 'Oswald', sans-serif;
-
-
-}
-
-.continuaAleggere{
-    font-weight: bold;
-    font-size: 10px;
-    color: #353A40;
-    display: flex;
-    justify-content: center;
-}
-
-.categoryMainTitle{
-    margin-bottom:2%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #949494;
-    font-style: oblique;
-}

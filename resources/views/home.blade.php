@@ -4,7 +4,7 @@
     <x-navbar2/>
     <x-navbar3/>
     
-    {{-- <x-search/> --}}
+    <x-search/> 
 </div>
 
 @if(session('message'))

@@ -1,6 +1,8 @@
 <div class="container articles-border my-5">
     @foreach ($articles as $article)
+    <hr class="bg-danger border-1 border-top border-danger text-center hr-article mb-2">
     <hr class="bg-danger border-1 border-top border-danger text-center hr-article">
+
         @if ($count % 2 == 0)
             <div data-aos="zoom-in" data-aos-duration="1500">
                 <div class="container my-5" style="width: 100%; heigth:300px">
@@ -13,9 +15,9 @@
                             <h3 class="article-description">{{$article->description}}</h3>
                             <p class="card-text"> {{substr($article->body, 0, 20)}} ...</p>
                             <div class="d-flex">
-                                <p>Tags : </p>
+                                
                                 @foreach($article->tags as $tag)
-                                    <span> #{{$tag->name}} </span>
+                                    <p>Tags : #{{$tag->name}} </p>
                                 @endforeach
                             </div>
                             <a href="{{route('articles.category', $article->category)}}" class="article-category">#{{$article->category->name}}</a>

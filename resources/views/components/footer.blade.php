@@ -36,21 +36,21 @@
 
 
         {{-- lista categorie --}}
-        <li class="dropdown footer-list" role="button">
-          <a class="dropdown-toggle footer-list" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="dropdown footer-list" role="button"> 
+          {{-- <a class="dropdown-toggle footer-list" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Categorie
-          </a>
-          <ul class="dropdown-menu footer-list">
+          </a> --}}
+          {{-- <ul class="dropdown-menu footer-list"> --}}
           @foreach ($categories as $category)
           
-            <a class="footer-list dropdown-item" aria-current="page" href="{{route('articles.category', compact('category'))}}">
+            <a class=" footer-list dropdown-item" aria-current="page" href="{{route('articles.category', compact('category'))}}">
             {{$category->name}}
             </a>
           
           
           @endforeach
-          </ul>
-        </li>
+          {{-- </ul> --}}
+         </li> 
         {{-- fine lista categorie --}}
 
         

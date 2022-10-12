@@ -20,8 +20,8 @@
     <x-navbar/>
     
 
-        
-    {{$slot}}
+        {{$slot}}
+
         
 
     

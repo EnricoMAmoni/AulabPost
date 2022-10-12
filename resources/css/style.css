@@ -48,6 +48,19 @@ a:hover{
     height: 80vh;
 }
 
+/* alert messages */
+
+.alert{
+    color: var(--main-color-yellow2);
+    background-color: black;
+    width: 40vw;
+    height: 6vh;
+    /* margin-right: 5vw; */
+}
+
+
+
+
 
 /* Navbar */
 
@@ -68,9 +81,9 @@ a:hover{
 
 .nav1{
     z-index: 989;
-    border-bottom: 1px solid rgb(234, 239, 231);
     /* background-color:  var(--main-color-dark); */
     background-color: black;
+    height: 8vh;
     position: sticky;
     top:0px;
 }
@@ -83,9 +96,9 @@ a:hover{
 .dropdown-menu{
     background-color: var(--main-color-dark);
     border: solid 1px white;
-    position: absolute;
-    right: 10vw;
     z-index: 999;
+    position: relative;
+    /* position: absolute; */
 }
 
 .navbar-div-logo-dinamico{
@@ -134,7 +147,8 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid rgb(234, 239, 231);
+    border-top: 1px solid rgb(234, 239, 231);
+
     /* background: linear-gradient(105deg, var(--main-color-yellow2) 6%,var(--main-color-dark) 6%); */
 }
 
@@ -147,9 +161,11 @@ a:hover{
 .nav3{
    /* background-color:  var(--main-color-dark); */
    background-color: black;
+   /* position: -webkit-sticky; */
+   border-top: 1px solid rgb(234, 239, 231);
+   height: 6vh;
    position: sticky;
-   top:4vh;
-   /* border-top: 1px solid rgb(234, 239, 231); */
+   top:8vh;
    z-index: 899;
 }
 
@@ -158,10 +174,19 @@ a:hover{
     justify-content: space-evenly;
     width: 100%;
 }
+/* font nav 3 */
 
+.article-category-nav{
+    color: aliceblue;
+    display: inline-block;
+}
+.article-category-nav:first-letter {
+    text-transform: uppercase;
+}
+/* media query per nascondere nav3 */
 @media screen and (max-width: 992px) {
     .nav3 {
-     display: none;
+        display: none;
     }
   }
 
@@ -169,25 +194,69 @@ a:hover{
 
 /* --- HOME --- */
 
-/* Card borders*/
+
+/* searchbar */
+.dropdown-searchbar{
+    z-index: 999;
+    position: relative;
+}
+/* sticky searchbar */
+
+/* .sticky-search{
+    position: sticky;
+    top: 14vh;
+    z-index: 999;
+} */
+
+
+/* medya query per nascondere bottone searchbar, ma non funziona */
+  @media screen and (min-width: 992px) {
+    div.example {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+/* article borders*/
 .articles-border{
     background-color: var(--main-color-soft);
     border-left: solid 2px lightgray;
     border-right: solid 2px lightgray;
+   
+}
+/* dotted o solid, cambiare colore? */
+.border-row-right-article{
+    border-top: dotted 2px lightgray;
+    border-bottom: dotted 2px lightgray;
+    /* margin-top: 2px; */
+}
+.border-row-left-article{
+    border-top: dotted 2px lightgray;
+    border-bottom: dotted 2px lightgray;
 }
 
-.hr-article{
-    border: lightgray;
+/* .hr-article{
+
     width:80%;
     margin: auto;
-}
+} */
 
-/* Fonts delle Card */
+/* Fonts delle Card (e della vista show)*/
 
 .article-description{
     font-family: 'Oswald', sans-serif;
     font-size: 25px;
     font-weight: 300;
+    display:inline-block;
+}
+.article-description:first-letter {
+    text-transform: uppercase;
 }
 
 .article-title{
@@ -200,19 +269,39 @@ a:hover{
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
     font-weight: 200;
+    color: #1C1018;
 }
+
 
 .article-body{
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     font-weight: 250;
+    display:inline-block;
+}
+.article-body:first-letter {
+    text-transform: uppercase;
 }
 
 
 .article-category{
     color: var(--main-color-yellow3);
     margin-right: 1rem;
+    display:inline-block;
 }
+.article-category:first-letter {
+    text-transform: uppercase;
+}
+
+.article-tag{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+
+
+
 
 
 .div-img-card{
@@ -232,15 +321,8 @@ a:hover{
     background: linear-gradient(614deg, var(--main-color-yellow2)  35%,rgba(0,0,0,0) 35%);
 }
 
-/* vista show */
 
-.div-img-show{
-    /* width: 70%; */
-    /* height: 90%; */
-    padding: 18px;
-    margin:10px;
-    background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%);
-}
+
 
 /* bottoni */
 .btn{
@@ -292,6 +374,39 @@ a:hover{
 
 /* Pagina Show */
 
+.div-img-show{
+    /* width: 70%; */
+    /* height: 90%; */
+    /* padding: 18px; */
+    height: 50vh;
+    margin:10px;
+    /* background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%); */
+    background: linear-gradient(105deg, var(--main-color-yellow2) 35%,rgba(0,0,0,0) 35%);
+    border: 3px solid  lightgray;
+}
+
+.img-show{
+    object-fit: contain;
+    /* border: 2px dotted lightgray; */
+}
+
+.article-category-title{
+    color: #1C1018;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    display: inline-block;
+}
+.article-category-title:first-letter {
+    text-transform: uppercase;
+}
+
+.article-category-show{
+    color: #1C1018;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
 /* .border-show{
     border: solid 3px black;
     width: 30%;
@@ -316,12 +431,7 @@ a:hover{
     font-weight: bold;
 }
 
-.ancor-auth{
-    color: rgb(211, 78, 78);
-}
-.ancor-auth:hover{
-    color: black;
-}
+
 
 .p-auth{
     font-size: 12px;
@@ -329,11 +439,13 @@ a:hover{
     color: #99a9bc;
     
 }
-
-.auth-button{
-   width: 20%;
-   border: none;
+.ancor-auth{
+    color: rgb(211, 78, 78);
 }
+.ancor-auth:hover{
+    color: black;
+}
+
 
 input,
 input::placeholder {
@@ -347,14 +459,50 @@ input::placeholder {
 
 /* CAROSELLO */
 
-.carosello{
+/* .carosello-row{
     display:flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
+    background-image: url(/media/VIRGOLETTE.png);
+} */
+
+.img-carosello{
+    /* width: 50vw; */
+    height: 60vh;
+    object-fit: contain;
 }
 
-.virgolette-gialle{
+.carosello-hover{
+    text-decoration: none;
+    color: white;
+}
+.carosello-hover:hover{
+    
+    color: var(--main-color-yellow1);
+}
+
+/* icona carosello, volendo si può cambiare con una background img */
+.carousel-control-next-icon{
+    background-color: var(--main-color-dark);
+    border-radius: 20%;
+    height: 5vh;
+    width: 6vw;
+    /* background-image: url(/public/media/VIRGOLETTE.png); */
+}
+/* oppure si può disegnare con css (si possono fare anche le doppie frecce o un triangolo)  */
+.carousel-control-prev-icon{
+    /* background-color: #ffc107; */
+    background-image: none;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+   
+/* .virgolette-gialle{
     
     height: 10vh;
     z-index: 999;
@@ -368,23 +516,19 @@ input::placeholder {
     height: 10vh;
     width: 7vh;
     z-index: 999;
-}
+} */
 
 
-.img-carosello{
-    width: 130vh;
-    /* height: 100vh; */
-}
 
 /* FOOTER */
 
-.bg-footer{
+/* .bg-footer{
     color: var(--main-color2);
-}
+} */
 
-.container-footer{
+/* .container-footer{
     background-color: black;
-}
+} */
 
 .footer-list{
     background-color: black;
@@ -398,6 +542,23 @@ input::placeholder {
     padding-bottom: 20px;
     border-bottom: solid 3px var(--main-color-yellow2);
 }
+
+.footer-icon{
+    text-decoration: none;
+    color: white;
+    margin-top: 2vh;
+    font-size: 5vh;
+}
+
+.footer-list-category{
+    text-decoration: none;
+    color: white;
+    border-bottom: solid 1px rgb(93, 93, 93);
+    margin-left: 5vw;
+    /* list-style: circle; */
+
+}
+
 
 
 

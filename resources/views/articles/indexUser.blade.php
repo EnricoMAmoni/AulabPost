@@ -3,10 +3,10 @@
     <x-navbar3/>
 
 
-    <div>
-      @foreach ($articles as $article)
-      <h2>Articoli di: {{$article->user->name}}</h2>
-      @endforeach
+    <div class="d-flex justify-content-center">
+      <h2 class="article-title mt-5">Articoli di: 
+        {{-- <span class="article-title">{{$article->user->name}}</span> --}}
+      </h2>
     </div>
 
 

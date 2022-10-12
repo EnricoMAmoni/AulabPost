@@ -7,7 +7,7 @@
         <ul class="navbar-nav list-nav3">
           @foreach ($categories as $category)
             <li class="nav-item ">
-              <a class="nav-link  textNav " aria-current="page" href="{{route('articles.category', compact('category'))}}">{{$category->name}}</a>
+              <a class="nav-link  textNav article-category-nav" aria-current="page" href="{{route('articles.category', compact('category'))}}">{{$category->name}}</a>
             </li>
           @endforeach
         </ul>

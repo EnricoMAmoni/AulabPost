@@ -1,50 +1,57 @@
 <x-layout>
     <x-navbar3/>
-    <div class="container bg pt-10 my-5">
-
-        <div>
-            <h2 class="text-center">{{$article->title}}</h2>    
-        </div>
-        <div class="row pt-5 pb-5 justify-content-evenly align-items-center">
-                
-            <div class="col-12 col-md-5 text-container article-description">
-                
-                @if (strpos($article->description, 'http') !== false)
-                    <h4><a href="{{$article->description}}">{{$article->description}}</a></h4>
-                @else
-                    <h4>{{$article->description}}</h4>
-                @endif
-
-                    <p class="article-author">Pubblicato da : <a class="article-author" href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
+    {{-- pt-10 my-5 --}}
+    <div class="container my-5 articles-border ">
+        {{-- pt-5 pb-5 justify-content-evenly align-items-center --}}
+        <div class="row justify-content-center">
+            <div class="d-flex text-center col-12 col-md-9">
+                <h2 class="article-title w-100">{{$article->title}}</h2>    
+            </div>
+        </div>        
+        
+        <div class="row justify-content-center">
+            <div class="d-flex text-center col-12 col-md-9">
+                <h4 class="article-description w-100">{{$article->description}}</h4>
             </div>         
-                   
-                
-            <div class="col-12 col-md-5 div-img-show ">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top"  alt="{{$article->title}}">
+        </div> 
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 div-img-show d-flex justify-content-center ">
+                <img src="{{Storage::url($article->img)}}" class="img-show mx-1 my-1 w-100"  alt="{{$article->title}}">
             </div>
-            <div class="col-11">
+        </div> 
 
-                <div class="text-container article-body">
-                    @if  (strpos($article->body, 'http') !== false)
-                        <p><a href="{{$article->body}}">{{$article->body}}</a></p>        
-                    @else        
-                        <p>{{$article->body}}</p        >
-                    @endif                
-                </div>
-
-                <p class="article-author">Pubblicato il : {{$article->created_at->format('d/m/Y')}}</p>
-
-
-
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 ">
+                <p class="article-author">Pubblicato da : <a class="article-author" href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
+                <p class="article-author"> - {{$article->created_at->format('d/m/Y')}}</p>
+               
             </div>
-            
+        </div> 
 
-         </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-7 d-flex justify-content-center">
+                <p class="article-body">{{$article->body}}</p>
+            </div>
+        </div> 
+
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 ">
+                    @foreach($article->tags as $tag)
+                        <p class="article-tag">Tags : #{{$tag->name}} </p>
+                    @endforeach
+                    <span class="article-category-show">Categoria: 
+                        <a href="{{route('articles.category', $article->category)}}" class="article-category-show">  {{$article->category->name}}</a>
+                    </span>
+            </div>
+        </div> 
     </div>
-
-
-
-
+                    
+    
+                    
+                                    
+    
 
 
     {{-- <div class="container mb-5">
@@ -81,18 +88,27 @@
     </div> --}}
 
 
-{{-- TEST VISTA SHOW --}}
 
-    {{-- <div class="container">
-        <div class="row">
-
-            <div class="col-12">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top card-img-show img-fluid"  alt="{{$article->title}}">
-
-            </div>
-        </div>
-        <div class="row">
-
-        </div>
-    </div> --}}
 </x-layout>
+            
+            
+
+                
+                
+                
+           
+                 
+                        
+                 
+                
+
+
+
+            
+            
+
+
+
+
+
+

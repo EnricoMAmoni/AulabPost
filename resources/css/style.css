@@ -484,22 +484,37 @@ input::placeholder {
 
 /* icona carosello, volendo si può cambiare con una background img */
 .carousel-control-next-icon{
+    /* BOTTONCINO */
     background-color: var(--main-color-dark);
     border-radius: 20%;
     height: 5vh;
     width: 6vw;
+    /* FRECCIA */
+    /* background-image: none;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg); */
+    /* IMMAGINE */
     /* background-image: url(/public/media/VIRGOLETTE.png); */
 }
 /* oppure si può disegnare con css (si possono fare anche le doppie frecce o un triangolo)  */
 .carousel-control-prev-icon{
-    /* background-color: #ffc107; */
-    background-image: none;
+    /* FRECCIA */
+    /* background-image: none;
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
     transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg); */
+    /* BOTTONCINO */
+    background-color: #ffc107;
+     border-radius: 20%;
+    height: 5vh;
+    width: 6vw;
 }
    
 /* .virgolette-gialle{

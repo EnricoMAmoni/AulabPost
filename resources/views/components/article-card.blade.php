@@ -7,10 +7,10 @@
             <div data-aos="zoom-in" data-aos-duration="1500">
                 <div class="container my-5" >
                     <div class="row border-row-left-article">
-                        <div class="col-12 col-md-5 div-img-card">
+                        <div class="col-12 col-md-5 div-img-card ">
                             <img src="{{Storage::url($article->img)}}" class="card-img-top card-img "  alt="{{$article->title}}">
                         </div>
-                        <div class="col-12 col-md-6 mt-3">
+                        <div class="col-12 col-md-6 mt-3 mb-2">
                             <h2 class="article-title">{{$article->title}}</h2>
                             <h3 class="article-description">{{$article->description}}</h3>
                             <p class="card-text"> {{substr($article->body, 0, 20)}} ...</p>

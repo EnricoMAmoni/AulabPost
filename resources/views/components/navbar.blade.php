@@ -50,6 +50,13 @@
               <a class="nav-link textNav" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
             </li>
             @endif
+
+            @if(Auth::user() && Auth::user()->is_writer)
+            {{-- bottone modifica articolo --}}
+            <li class="nav-item">
+              <a class="nav-link textNav" href="{{route('articles.dashboard')}}">Dashboard writer</a>
+            </li>    
+            @endif
                 
             @if(Auth::user() && Auth::user()->is_writer)
             {{-- bottone inserimento articolo --}}

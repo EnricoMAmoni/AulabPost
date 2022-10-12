@@ -27,6 +27,7 @@ body{
 
 *{
     font-family: 'Poppins', sans-serif;
+    word-wrap: break-word;
 }
 
 /* style ul e hover links */
@@ -50,13 +51,13 @@ a:hover{
 
 /* alert messages */
 
-.alert{
+/* .alert{
     color: var(--main-color-yellow2);
     background-color: black;
     width: 40vw;
     height: 6vh;
-    /* margin-right: 5vw; */
-}
+    padding: 2vh;
+} */
 
 
 
@@ -587,4 +588,6 @@ input::placeholder {
 /* .text-container{
     word-wrap: break-word;
 } */
+
+
 

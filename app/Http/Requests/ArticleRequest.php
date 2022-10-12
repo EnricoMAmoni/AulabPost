@@ -24,7 +24,7 @@ class ArticleRequest extends FormRequest
     public function rules()
     {
         return[
-            'title'=>'required|max:50',
+            'title'=>'required|max:150',
             'description'=>'required|min:5|max:255',
             'body'=>'required|min:30|max:10000',
             'img'=>'required|mimes:png,jpg,jpeg,webp',
@@ -35,7 +35,7 @@ class ArticleRequest extends FormRequest
                 
         return[
             'title.required'=>'Devi inserire il titolo.',
-            'title.max'=>'Il titolo deve essere di massimo 50 caratteri.',
+            'title.max'=>'Il titolo deve essere di massimo 150 caratteri.',
 
             'description.required'=>'Devi inserire la descrizione.',
             'description.min'=>'La descrizione deve essere di minimo 5 caratteri.',

@@ -19,10 +19,14 @@ use App\Http\Controllers\RevisorController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
-// rotte per articoli
+// rotte per articoli e writer
 Route::middleware('writer')->group(function(){
     Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
     Route::post('/articles/store', [ArticleController::class, 'store'])->name('articles.store');
+    Route::get('/articles/dashboard', [ArticleController::class, 'articleDashboard'])->name('articles.dashboard');
+    Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])->name('articles.edit');
+    Route::put('/articles/{article}/update', [ArticleController::class, 'update'])->name('articles.update');
+    Route::delete('/articles/{article}/delete', [ArticleController::class, 'destroy'])->name('articles.delete');
 });
 // rotte viste articoli
 Route::get('/articles/{article}/show', [ArticleController::class, 'show'])->name('articles.show');
@@ -66,3 +70,4 @@ Route::middleware('revisor')->group(function(){
     Route::get('/revisor/article/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.reject');
 
 });    
+

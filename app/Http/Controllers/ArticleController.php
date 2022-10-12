@@ -93,6 +93,12 @@ class ArticleController extends Controller
     }
 
 
+    public function articleDashboard()
+    {
+        return view('articles.dashboard');
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -101,7 +107,8 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        $tags = Tag::all();
+        return view ('articles.edit', compact('article', 'tags'));
     }
 
     /**
@@ -111,9 +118,34 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(ArticleRequest $request, Article $article)
     {
-        //
+        if($request->has('img')){
+            $article->update(
+                [
+                'title'=>$request->input('title'),
+                'description'=>$request->input('description'),
+                'body'=>$request->input('body'),
+                'img'=>$request->file('img')->store("public/img"),
+                'category_id'=>$request->input('category_id')
+                ]
+            );
+
+        }else{
+            $article->update(
+                [
+                'title'=>$request->input('title'),
+                'description'=>$request->input('description'),
+                'body'=>$request->input('body'),
+                'category_id'=>$request->input('category_id')
+                ]
+            );
+
+        }
+
+        $article->tags()->detach();
+        $article->tags()->sync($request->input('tags'));
+        return redirect()->route('articles.dashboard')->with("message", "Articolo caricato correttamente");
     }
 
     /**
@@ -124,6 +156,7 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        $article->delete();
+        return redirect()->route('articles.dashboard');
     }
 }

@@ -15,16 +15,35 @@
             </div>         
         </div> 
 
+
+
+
+
+
+<!-- 
         <div class="row justify-content-center">
             <div class="col-12 col-md-9 div-img-show d-flex justify-content-center ">
                 <img src="{{Storage::url($article->img)}}" class="img-show mx-1 my-1 w-100"  alt="{{$article->title}}">
             </div>
-        </div> 
+        </div>  -->
+
+
+        <div class="container my-5" >
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-5 div-img-card ">
+                            <img src="{{Storage::url($article->img)}}" class="card-img-top card-img "  alt="{{$article->title}}">
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+
 
         <div class="row justify-content-center">
             <div class="col-12 col-md-9 ">
                 <p class="article-author">Pubblicato da : <a class="article-author" href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
-                <p class="article-author"> - {{$article->created_at->format('d/m/Y')}}</p>
+                <p class="article-author">{{$article->created_at->format('d/m/Y')}}</p>
                
             </div>
         </div> 

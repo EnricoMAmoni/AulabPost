@@ -383,7 +383,7 @@ a:hover{
     margin:10px;
     /* background: linear-gradient(614deg, #ffc107  35%,rgba(0,0,0,0) 35%); */
     background: linear-gradient(105deg, var(--main-color-yellow2) 35%,rgba(0,0,0,0) 35%);
-    border: 3px solid  lightgray;
+    /* border: 3px solid  lightgray; */
 }
 
 .img-show{

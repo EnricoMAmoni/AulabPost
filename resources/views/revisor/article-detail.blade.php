@@ -19,9 +19,19 @@
             </div>         
                    
                 
-            <div class="col-12 col-md-5 div-img-show ">
-                <img src="{{Storage::url($article->img)}}" class="card-img-top card-img-show "  alt="{{$article->title}}">
-            </div>
+
+                <div class="container my-5" >
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-5 div-img-card ">
+                            <img src="{{Storage::url($article->img)}}" class="card-img-top card-img "  alt="{{$article->title}}">
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+          
+            
             <div class="col-11">
 
                 <div class="text-container article">

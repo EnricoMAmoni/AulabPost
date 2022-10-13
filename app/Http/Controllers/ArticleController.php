@@ -56,8 +56,8 @@ class ArticleController extends Controller
             {
                 $article->tags()->attach($tagId);
             }
-
-            return redirect()->route('home')->with("message", "Articolo caricato correttamente");
+            
+            return redirect()->route('home')->with("message", "Articolo caricato correttamente, inviato in revisione");
     }
 
 
@@ -145,7 +145,7 @@ class ArticleController extends Controller
 
         $article->tags()->detach();
         $article->tags()->sync($request->input('tags'));
-        return redirect()->route('articles.dashboard')->with("message", "Articolo caricato correttamente");
+        return redirect()->route('articles.dashboard')->with("message", "Articolo modificato correttamente");
     }
 
     /**

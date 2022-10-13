@@ -22,7 +22,7 @@ class RevisorController extends Controller
         $article->is_accepted = true;
         $article->save();
 
-        return redirect()->route('revisor.dashboard');
+        return redirect()->route('revisor.dashboard')->with('message', 'articolo pubblicato');
     }
 
     public function rejectArticle(Article $article)
@@ -30,7 +30,7 @@ class RevisorController extends Controller
         $article->is_accepted = false;
         $article->save();
 
-        return redirect()->route('revisor.dashboard');
+        return redirect()->route('revisor.dashboard')->with('message', 'articolo rifiutato');
     }
 
 }

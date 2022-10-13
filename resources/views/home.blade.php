@@ -1,12 +1,7 @@
 <x-layout>
 
-<div data-aos="fade-down" data-aos-duration="1500">
-
     <x-navbar2/>
-    
-    
-    
-</div>
+
     <x-navbar3/>
     <x-search/> 
 @if(session('message'))

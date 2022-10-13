@@ -53,8 +53,25 @@
         {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article mb-2"> --}}
         {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article"> --}}
     @empty
+    
+    <div class="container-fluid vh-60 justify-content-center align-items-center">
+        <div class="row  text-center">
 
-        <div class="justify-content-center">non sono stati caricati articoli</div>
+        
+            {{-- <div class="row"> --}}
+                <div class="col-12">
+                    <h5 class="article-error">Non sono ancora stati caricati articoli </h5>
+                </div>
+            {{-- </div> --}}
+            {{-- <div class="row mt-5"> --}}
+                <div class="col-12 mt-5">
+                    <img class="img-fluid" src="/media/stitch.gif" alt="stitch che piange"> 
+                </div>
+            {{-- </div> --}}
+        </div> 
+         
+    </div>
+       
         
     @endforelse
     

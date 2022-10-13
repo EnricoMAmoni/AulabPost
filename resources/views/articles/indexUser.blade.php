@@ -3,13 +3,9 @@
     <x-navbar3/>
 
 
-    <div class="d-flex justify-content-center">
-      <h2 class="article-title mt-5">Articoli di: 
-        {{-- <span class="article-title">{{$article->user->name}}</span> --}}
-      </h2>
-    </div>
+    
 
-
+   
     <x-article-card :articles="$articles" :count="$count"/>
 
     {{-- <div class="container">

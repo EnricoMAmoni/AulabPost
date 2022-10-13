@@ -1,4 +1,5 @@
-<div class="container-fluid bg-black">
+
+  <div class="container-fluid bg-black footer">
   <div class="row justify-content-center align-items-top pt-5">
 
     {{-- CONTATTI --}}
@@ -84,3 +85,4 @@
 
   </div>
 </div>
+

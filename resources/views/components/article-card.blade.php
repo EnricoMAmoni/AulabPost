@@ -1,9 +1,7 @@
 <div class="container articles-border my-5">
-    @foreach ($articles as $article)
-    {{-- <hr class="border-1 border-top border-danger text-center hr-article mb-2"> --}}
-    {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article"> --}}
 
-        @if ($count % 2 == 0)
+    @forelse ($articles as $article)
+         @if ($count % 2 == 0)
             <div data-aos="zoom-in" data-aos-duration="1500">
                 <div class="container my-5" >
                     <div class="row border-row-left-article">
@@ -52,9 +50,12 @@
             </div>
         @endif
         @php $count++; @endphp
-    {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article mb-2"> --}}
-    {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article"> --}}
+        {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article mb-2"> --}}
+        {{-- <hr class="bg-danger border-1 border-top border-danger text-center hr-article"> --}}
+    @empty
 
-
-    @endforeach
+        <div class="justify-content-center">non sono stati caricati articoli</div>
+        
+    @endforelse
+    
 </div>

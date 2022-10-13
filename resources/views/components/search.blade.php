@@ -8,14 +8,14 @@
         </div>
         
         {{-- inserire me-2 nel div? --}}
-        <div class="dropdown col-12 col-md-6 p-2 d-flex justify-content-end example" >
-            <a class="dropdown-toggle btn example" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="dropdown col-12 col-md-6 p-2 d-flex justify-content-end hide-search hide-search" >
+            <a class="dropdown-toggle btn hide-search " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Cerca per categoria
             </a>
-            <ul class="dropdown-menu dropdown-searchbar">
+            <ul class="dropdown-menu dropdown-searchbar hide-search">
                 @foreach ($categories as $category)
-                <li>
-                    <a class="dropdown-item textNav" href="{{route('articles.category', compact('category'))}}">{{$category->name}}</a>
+                <li class="hide-search dropdown-searchbar">
+                    <a class="dropdown-item textNav dropdown-searchbar" href="{{route('articles.category', compact('category'))}}">{{$category->name}}</a>
                 </li>
                 @endforeach
             

@@ -3,7 +3,7 @@
     <div class="container bg pt-10 my-5">
 
         <div>
-            <h2 class="text-center">{{$article->title}}</h2>    
+            <h2 class="text-center article-title">{{$article->title}}</h2>    
         </div>
         <div class="row pt-5 pb-5 justify-content-evenly align-items-center">
                 
@@ -46,8 +46,8 @@
 
             </div>
             <div class="d-flex justify-content-evenly mt-5">
-                <a href="{{route('revisor.accept', $article)}}" class="btn btn-success mx-5">Accetta</a>
-                <a href="{{route('revisor.reject', $article)}}" class="btn btn-success mx-5">Rifiuta</a>
+                <a href="{{route('revisor.accept', $article)}}" class="btn  mx-5">Accetta</a>
+                <a href="{{route('revisor.reject', $article)}}" class="btn btn-delete mx-5">Rifiuta</a>
             </div>
             
 

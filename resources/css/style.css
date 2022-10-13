@@ -210,10 +210,10 @@ a:hover{
 } */
 
 
-/* medya query per nascondere bottone searchbar, ma non funziona */
-  @media screen and (min-width: 992px) {
-    div.example {
-      display: none;
+/* media query per nascondere bottone searchbar, ma non funziona */
+  @media screen and (min-width: 800px) {
+     .hide-search {
+      display: none !important;
     }
   }
 
@@ -512,10 +512,15 @@ input::placeholder {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg); */
     /* BOTTONCINO */
-    background-color: #ffc107;
+    background-color: #000000;
      border-radius: 20%;
     height: 5vh;
     width: 6vw;
+}
+
+.carousel, .carousel-indicators, .carousel-inner, .carousel-item, .carousel-control-prev, .carousel-control- {
+    /* position: relative; */
+    z-index: 1 !important;
 }
    
 /* .virgolette-gialle{
@@ -588,6 +593,11 @@ input::placeholder {
 /* .text-container{
     word-wrap: break-word;
 } */
+
+/* FOOTER */
+
+
+
 
 /* MEDIA QUERY */
 

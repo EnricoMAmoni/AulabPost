@@ -57,5 +57,5 @@
                             @enderror
                         
                     </div>
-                    <button type="submit" class="btn btn-success">Pubblica</button>
+                    <button type="submit" class="btn">Pubblica</button>
 </form>

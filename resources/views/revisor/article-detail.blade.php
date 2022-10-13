@@ -3,11 +3,11 @@
     <div class="container bg pt-10 my-5">
 
         <div>
-            <h2 class="text-center">{{$article->title}}</h2>    
+            <h2 class="text-center article-title">{{$article->title}}</h2>    
         </div>
         <div class="row pt-5 pb-5 justify-content-evenly align-items-center">
                 
-            <div class="col-12 col-md-5 text-container article-description">
+            <div class="col-12 col-md-5 text-container article-description text-center">
                 
                 @if (strpos($article->description, 'http') !== false)
                     <h4><a href="{{$article->description}}">{{$article->description}}</a></h4>
@@ -15,7 +15,7 @@
                     <h4>{{$article->description}}</h4>
                 @endif
 
-                    <p class="article-author">Creato da : <a class="article-author" href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
+                    
             </div>         
                    
                 
@@ -24,17 +24,25 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-md-5 div-img-card ">
                             <img src="{{Storage::url($article->img)}}" class="card-img-top card-img "  alt="{{$article->title}}">
+                            
                         </div>
                         
                     </div>
                 </div>
 
 
-          
+                <div class="row justify-content-center text-center">
+                    <p class="article-author">Creato : {{$article->created_at->diffForHumans()}}</p>
+                    <p class="article-author">Creato da : <a class="article-author" href="{{route('articles.user', $article->user)}}">{{$article->user->name}}</a></p>
+                </div>
+
+
             
-            <div class="col-11">
+            
+            <div class="col-12 col-md-7 d-flex justify-content-center">
 
                 <div class="text-container article">
+                    
                     @if  (strpos($article->body, 'http') !== false)
                         <p><a href="{{$article->body}}">{{$article->body}}</a></p>        
                     @else        
@@ -42,12 +50,12 @@
                     @endif                
                 </div>
 
-                <p class="article-author">Creato : {{$article->created_at->diffForHumans()}}</p>
+                
 
             </div>
             <div class="d-flex justify-content-evenly mt-5">
-                <a href="{{route('revisor.accept', $article)}}" class="btn btn-success mx-5">Accetta</a>
-                <a href="{{route('revisor.reject', $article)}}" class="btn btn-success mx-5">Rifiuta</a>
+                <a href="{{route('revisor.accept', $article)}}" class="btn  mx-5">Accetta</a>
+                <a href="{{route('revisor.reject', $article)}}" class="btn btn-delete mx-5">Rifiuta</a>
             </div>
             
 

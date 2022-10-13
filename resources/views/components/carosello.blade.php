@@ -1,4 +1,4 @@
- <div data-aos="fade-up" data-aos-duration="1500">
+ {{-- <div data-aos="fade-up" data-aos-duration="1500"> --}}
      <div class="container-fluid mt-5">
          <div class="row justify-content-center ">
              {{-- <div class="div-virgolette-gialle">
@@ -58,7 +58,7 @@
 
          </div>
      </div>
- </div>
+ {{-- </div> --}}
 
 
 

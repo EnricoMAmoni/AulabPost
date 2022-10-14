@@ -16,7 +16,7 @@
              <td>{{$user->name}}</td>
              <td>{{$user->email}}</td>
              <td>
-                <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn btn-primary">Rendi Admin</a>
+                <a href="{{route('admin.makeUserAdmin', $user)}}" class="btn">Rendi Admin</a>
              </td>
             
         </tr>

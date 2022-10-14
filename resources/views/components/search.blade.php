@@ -1,5 +1,5 @@
-<div class="container-fluid mt-3  sticky-search">
-    <div class="row justify-content-evenly align-items-center">
+<div class="container-fluid">
+    <div class="row justify-content-evenly align-items-center mt-2">
         <div class="col-12 col-md-6">
             <form action="{{route('search.articles')}}" method="get" class="d-flex">
                 <input type="text" name="key" class="form-control me-2" placeholder="Cerca">
@@ -21,8 +21,5 @@
             
             </ul>
         </div>
-    
-    
-    
     </div>
 </div>

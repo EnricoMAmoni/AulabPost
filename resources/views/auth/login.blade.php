@@ -1,7 +1,7 @@
 <x-layout>
    
-<div class="container">
-    <div class="row vh-80 justify-content-center align-items-center ">
+<div class="container my-5">
+    <div class="row h-100 justify-content-center align-items-center ">
             <!-- <h3 class="text-center fs-1 mt-5">Accedi</h3> -->
         <div class="col-11 col-md-6 col-lg-6  border-auth">
                 <form action="{{route('login')}}" method="POST">

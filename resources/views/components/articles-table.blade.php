@@ -4,22 +4,22 @@
         
         @foreach ($articles as $article)
 
-        <div class="col-12 col-md-2 ">
-            <h3 class="mt-2">#</h3>
+        <div class="col-12 col-md-3 ">
+            <h3 class="mt-2">ID</h3>
             <p class=" mt-3">{{$article->id}}</p>
             
         </div>
-        <div class="col-12 col-md-2">
+        <div class="col-12 col-md-3">
             <h3 class="mt-2">Titolo</h3>
             <p class=" mt-3">{{$article->title}}</p>
             
         </div>
-        <div class="col-12 col-md-2">
+        <div class="col-12 col-md-3">
             <h3 class="mt-2">Creato il</h3>
             <p class=" mt-3">{{$article->created_at->format("d/m/y")}}</p>
             
         </div>
-        <div class="col-12 col-md-2">
+        <div class="col-12 col-md-3">
             <h3 class="mt-2">Status</h3>
             <p class=" mt-3">{{$article->is_accepted ? "Pubblicato" : "Non pubblicato"}}</p>
             

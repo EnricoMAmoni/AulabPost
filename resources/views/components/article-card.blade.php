@@ -37,7 +37,7 @@
                                 @foreach($article->tags as $tag)
                                 <span> #{{$tag->name}} </span>
                                 @endforeach
-                            </p>
+                                </p>
                             {{-- </div> --}}
                             <a href="{{route('articles.category', $article->category)}}" class="article-category">{{$article->category->name}}</a>
                             <a href="{{route('articles.show', $article)}}" class="btn me-3">Leggi</a>

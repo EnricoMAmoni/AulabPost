@@ -2,7 +2,15 @@
    
     
 <div class="container my-5">
-        <div class="row vh-80 justify-content-center align-items-center ">
+    @if(session('message'))
+
+    <div class="alert alert-warning d-flex align-items-center mt-2 justify-content-center ms-3 ">
+        {{session('message')}}
+    </div>
+    
+    @endif 
+
+        <div class="row h-100 justify-content-center align-items-center ">
             <!-- <h3 class="text-center fs-1 mt-5">Registrati</h3> -->
             <div class="col-11 col-md-6 col-lg-6 border-auth ">
                 <form action="{{route('register')}}" method="POST">

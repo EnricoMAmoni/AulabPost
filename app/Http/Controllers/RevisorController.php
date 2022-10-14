@@ -28,7 +28,7 @@ class RevisorController extends Controller
     public function rejectArticle(Article $article)
     {
         $article->is_accepted = false;
-        $article->save();
+        $article->delete();
 
         return redirect()->route('revisor.dashboard')->with('message', 'articolo rifiutato');
     }

@@ -86,24 +86,23 @@ a:hover{
     z-index: 989;
     /* background-color:  var(--main-color-dark); */
     background-color: black;
-    height: 8vh;
+    /* height: 8vh; */
     position: sticky;
     top:0px;
-    border-left: 5px solid #fcea1a;
-    border-right: 5px solid #fcea1a;
-    border-top: 5px solid #fcea1a;
-    border-bottom: 5px solid #fcea1a;
+    border-left: 3px solid #fcea1a;
+    border-right: 3px solid #fcea1a;
+    border-top: 3px solid #fcea1a;
+    border-bottom: 3px solid #fcea1a;
 }
 
 .dropdown-user{
     text-decoration: none!important;
-
 }
 
 .dropdown-menu{
     background-color: var(--main-color-dark);
     border: solid 1px white;
-    z-index: 999;
+    z-index: 9999;
     position: relative;
     /* position: absolute; */
 }
@@ -133,6 +132,15 @@ a:hover{
     position: absolute;
     right: 5vw;
 }
+@media screen and (max-width: 992px) {
+    .nav-log {
+      position: relative;
+      left: 0px;
+        
+    }
+  }
+
+
 
 
 
@@ -155,16 +163,16 @@ a:hover{
     align-items: center;
     justify-content: center;
     /* border-top: 1px solid rgb(234, 239, 231); */
-    border-left: 5px solid #fcea1a;
-    border-right: 5px solid #fcea1a;
+    border-left: 3px solid #fcea1a;
+    border-right: 3px solid #fcea1a;
     
-    border-bottom: 5px solid #fcea1a;
+    border-bottom: 3px solid #fcea1a;
 
     /* background: linear-gradient(105deg, var(--main-color-yellow2) 6%,var(--main-color-dark) 6%); */
 }
 
 .logo-nav2{
-    height: 10vh;
+    height: 15vh;
 }
 
 /* Navbar3 */
@@ -174,13 +182,13 @@ a:hover{
    background-color: black;
    /* position: -webkit-sticky; */
    /* border-top: 1px solid rgb(234, 239, 231); */
-   height: 6vh;
+   height: 35px;
    position: sticky;
-   top:8vh;
+   top:62px;
    z-index: 899;
-   border-left: 5px solid #fcea1a;
-   border-right: 5px solid #fcea1a;
-   border-bottom: 5px solid #fcea1a;
+   border-left: 3px solid #fcea1a;
+   border-right: 3px solid #fcea1a;
+   border-bottom: 3px solid #fcea1a;
 }
 
 .list-nav3{
@@ -218,18 +226,23 @@ a:hover{
 
 /* .sticky-search{
     position: sticky;
-    top: 14vh;
+    top: 97px;
     z-index: 999;
+    border: 1px solid #fcea1a;
+    background-color: black;
 } */
 
 
-/* media query per nascondere bottone searchbar, ma non funziona */
-  @media screen and (min-width: 800px) {
+
+
+/* media query per nascondere bottone searchbar */
+  @media screen and (min-width: 992px) {
      .hide-search {
       display: none !important;
     }
   }
 
+  
 
 
 
@@ -572,10 +585,12 @@ input::placeholder {
 } */
 
 .footer{
-    border-left: 5px solid #fcea1a;
-    border-right: 5px solid #fcea1a;
-    border-top: 5px solid #fcea1a;
-    border-bottom: 5px solid #fcea1a;
+    border-left: 3px solid #fcea1a;
+    border-right: 3px solid #fcea1a;
+    border-top: 3px solid #fcea1a;
+    border-bottom: 3px solid #fcea1a;
+    z-index: 8999;
+    position: relative;
 }
 
 .footer-list{
@@ -635,4 +650,5 @@ input::placeholder {
         text-align: center;
     }
 }
-    
+
+ 

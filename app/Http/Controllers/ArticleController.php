@@ -92,6 +92,8 @@ class ArticleController extends Controller
         return view('articles.indexUser', compact('articles', 'user', 'count'));
     }
 
+    
+
 
     public function articleDashboard()
     {

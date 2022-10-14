@@ -55,11 +55,12 @@
         {{-- fine lista categorie --}}
 
         
-
-
-        <a class="list-group-item footer-list" href="{{route('work.with.us')}}"><li>Lavora con noi</li></a>
+        @guest
         <a class="list-group-item footer-list" href="{{route('login')}}"><li>Accedi</li></a>
         <a class="list-group-item footer-list" href="{{route('register')}}"><li>Registrati</li></a>
+        @else  
+        <a class="list-group-item footer-list" href="{{route('work.with.us')}}"><li>Lavora con noi</li></a>
+        @endguest
       </ul>
     </div>
 

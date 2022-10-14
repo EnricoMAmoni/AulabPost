@@ -33,11 +33,9 @@
                             <h3 class="article-description">{{$article->description}}</h3>
                             <p class="card-text"> {{substr($article->body, 0, 20)}} ...</p>
                             {{-- <div class="d-flex"> --}}
-                                <p>Tags : 
                                 @foreach($article->tags as $tag)
-                                <span> #{{$tag->name}} </span>
+                                <p class="article-tag">Tags : #{{$tag->name}} </p>
                                 @endforeach
-                                </p>
                             {{-- </div> --}}
                             <a href="{{route('articles.category', $article->category)}}" class="article-category">{{$article->category->name}}</a>
                             <a href="{{route('articles.show', $article)}}" class="btn me-3">Leggi</a>

@@ -1,7 +1,7 @@
 <nav class="navbar nav1 navbar-expand-lg text-nav">
   <div class="container-fluid">
       
-    <a class="navbar-brand textNav " href="{{route('home')}}"> <img src="/media/VIRGOLETTE.png" class="img-logo-nav ms-3" alt="logo aulab post">  </a>
+    <a class="navbar-brand textNav" href="{{route('home')}}"> <img src="/media/VIRGOLETTE.png" class="img-logo-nav ms-3" alt="logo aulab post">  </a>
     <i class="fa-regular fa-circle-user navbar-toggler" type="button" data-bs-target="#navbarNav" data-bs-toggle="collapse" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,7 +13,7 @@
     <div class="navbar-collapse collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link textNav aria-current="page" "  href="{{route('home')}}">Home</a>
+          <a class="nav-link textNav aria-current="page href="{{route('home')}}">Home</a>
         </li>
         @guest
         <li class="nav-item">
